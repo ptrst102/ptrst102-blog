@@ -1,0 +1,33 @@
+---
+import { cdate } from "@/lib/cdate";
+import Tag from "./Tag.astro";
+
+interface Props {
+  publishDate: Date;
+  updateDate?: Date;
+  slug: string;
+  title: string;
+  tags: string[];
+}
+
+const { publishDate, updateDate, slug, title, tags } = Astro.props;
+
+const publishAt = cdate(publishDate).format("YYYY年M月D日");
+const updateAt = updateDate && cdate(updateDate).format("YYYY年M月D日");
+---
+
+<article class="p-2">
+  <h2 class="pb-2">
+    <a href={`/blog/${slug}`} class="link link-primary text-2xl font-bold">
+      {title}
+    </a>
+  </h2>
+
+  <div class="prose flex items-center gap-2">
+    <span>{publishAt} 公開</span>
+    {updateAt && <span>{updateAt} 更新</span>}
+  </div>
+  <div class="space-x-1">
+    {tags.filter((tag) => !!tag).map((tag) => <Tag name={tag} />)}
+  </div>
+</article>

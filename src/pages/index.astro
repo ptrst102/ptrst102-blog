@@ -1,0 +1,69 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getPosts } from "@/lib/getPosts";
+import Tag from "@/components/Tag.astro";
+import icon from "@/assets/icon.jpg";
+import { Image } from "astro:assets";
+import PostCard from "@/components/PostCard.astro";
+
+const posts = await getPosts();
+const tags = Array.from(
+  new Set(posts.map(({ data }) => data.tags).flat()),
+).sort();
+---
+
+<Layout title="TOP">
+  <section class="content">
+    {
+      posts.map((post) => {
+        return (
+          <PostCard
+            slug={post.slug}
+            publishDate={post.data.publishDate}
+            updateDate={post.data.updateDate}
+            title={post.data.title}
+            tags={post.data.tags}
+          />
+        );
+      })
+    }
+  </section>
+  <section class="content">
+    <h1 class="heading_text">タグ</h1>
+    <div class="space-x-1 p-2">
+      {tags.filter((tag) => !!tag).map((tag) => <Tag name={tag} />)}
+    </div>
+  </section>
+  <section class="content">
+    <h1 class="heading_text">管理人情報</h1>
+    <div class="card card-side m-2 bg-base-100 shadow-xl">
+      <figure class="pl-5">
+        <Image
+          src={icon}
+          alt="icon"
+          width={80}
+          height={80}
+          class="rounded-full"
+        />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">ptrst</h2>
+        <p>
+          こんにちは。<a href="https://twitter.com/ptrst102" class="link"
+            >@ptrst102</a
+          >
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+<style>
+  .content {
+    @apply p-2;
+  }
+
+  .heading_text {
+    @apply text-2xl font-bold;
+    @apply mb-3;
+  }
+</style>

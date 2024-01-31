@@ -1,0 +1,60 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import { getPosts } from "@/lib/getPosts";
+import PostCard from "@/components/PostCard.astro";
+
+interface Props {
+  posts: CollectionEntry<"blog">[];
+  tag: string;
+}
+
+export const getStaticPaths = async () => {
+  const posts = await getPosts();
+  const tags = Array.from(new Set(posts.map(({ data }) => data.tags).flat()));
+
+  return tags.map((tag) => {
+    return {
+      params: {
+        tag,
+      },
+      props: {
+        tag,
+        posts: posts.filter(({ data }) => data.tags.includes(tag)),
+      },
+    };
+  });
+};
+
+const { tag, posts } = Astro.props;
+---
+
+<Layout title={`タグ: ${tag}`}>
+  <section class="content">
+    <h1 class="heading_text">{`#${tag}`}</h1>
+
+    {
+      posts.map((post) => {
+        return (
+          <PostCard
+            slug={post.slug}
+            publishDate={post.data.publishDate}
+            updateDate={post.data.updateDate}
+            title={post.data.title}
+            tags={post.data.tags}
+          />
+        );
+      })
+    }
+  </section>
+</Layout>
+<style>
+  .content {
+    @apply p-2;
+  }
+
+  .heading_text {
+    @apply text-2xl font-bold;
+    @apply mb-3;
+  }
+</style>
