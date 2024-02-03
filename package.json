@@ -42,5 +42,8 @@
     "prettier-plugin-tailwindcss": "^0.5.11",
     "textlint": "^13.4.1",
     "textlint-rule-preset-ja-technical-writing": "^10.0.1"
+  },
+  "volta": {
+    "node": "20.11.0"
   }
 }
