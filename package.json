@@ -23,6 +23,7 @@
     "@astrojs/tailwind": "5.1.0",
     "@tailwindcss/typography": "^0.5.10",
     "astro": "^4.3.0",
+    "astro-seo": "^0.8.0",
     "cdate": "^0.0.7",
     "daisyui": "^4.6.1",
     "sharp": "^0.33.2",

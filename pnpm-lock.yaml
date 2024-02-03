@@ -20,6 +20,9 @@ dependencies:
   astro:
     specifier: ^4.3.0
     version: 4.3.0(typescript@5.3.3)
+  astro-seo:
+    specifier: ^0.8.0
+    version: 0.8.0
   cdate:
     specifier: ^0.0.7
     version: 0.0.7
@@ -1795,6 +1798,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /astro-seo@0.8.0:
+    resolution: {integrity: sha512-7gq6lhibCM8FuzZIJlbLLWP5EJ9KL2/4XqeFrAg9O6ZK2xMFxJ5ubKf+a0VJwwTu8W8Xr421CmpiXu6Hq7n/7Q==}
+    dev: false
 
   /astro@4.3.0(typescript@5.3.3):
     resolution: {integrity: sha512-DSn7q7KJ9lmA7B3faz6uaIIRTzJduKNYRAsgXDn+wH1Jso33PFOU3ZcI4knlMAqhFW3MX8WorB8Hg6kR+waQXg==}

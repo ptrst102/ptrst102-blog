@@ -2,24 +2,59 @@
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { BLOG_TITLE } from "@/config";
+import { SEO } from "astro-seo";
 
 interface Props {
   title: string;
+  seo: SEOProps;
 }
 
-const { title } = Astro.props;
+interface SEOProps {
+  openGraph: {
+    type: string;
+    image?: string;
+  };
+}
+
+const { title, seo } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <title>{title} | {BLOG_TITLE}</title>
+    <SEO
+      title={`${title} | ${BLOG_TITLE}`}
+      charset="UTF-8"
+      openGraph={{
+        basic: {
+          title,
+          type: seo.openGraph.type,
+          image: seo.openGraph.image ?? "",
+        },
+        article: {
+          authors: ["ptrst102"],
+        },
+        image: {
+          alt: title,
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        title,
+        creator: "@ptrst102",
+      }}
+      extend={{
+        link: [
+          { rel: "icon", href: "/favicon.ico" },
+          { rel: "sitemap", href: "/sitemap-index.xml" },
+        ],
+        meta: [
+          { name: "viewport", content: "width=device-width" },
+          { name: "generator", content: Astro.generator },
+          { name: "format-detection", content: "telephone=no" },
+        ],
+      }}
+    />
   </head>
   <body>
     <Header />

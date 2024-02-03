@@ -29,7 +29,7 @@ export const getStaticPaths = async () => {
 const { tag, posts } = Astro.props;
 ---
 
-<Layout title={`タグ: ${tag}`}>
+<Layout title={`タグ: ${tag}`} seo={{ openGraph: { type: "article" } }}>
   <section class="content">
     <h1 class="heading_text">{`#${tag}`}</h1>
 

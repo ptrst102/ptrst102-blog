@@ -12,7 +12,7 @@ const tags = Array.from(
 ).sort();
 ---
 
-<Layout title="TOP">
+<Layout title="TOP" seo={{ openGraph: { type: "website" } }}>
   <section class="content">
     {
       posts.map((post) => {
