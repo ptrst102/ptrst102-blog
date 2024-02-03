@@ -28,7 +28,15 @@ const updateAt =
   post.data.updateDate && cdate(post.data.updateDate).format("YYYY年M月D日");
 ---
 
-<Layout title={post.data.title} seo={{ openGraph: { type: "article" } }}>
+<Layout
+  title={post.data.title}
+  seo={{
+    openGraph: {
+      type: "article",
+      image: new URL(`/og/${post.slug}.png`, import.meta.env.SITE).toString(),
+    },
+  }}
+>
   <section class="content">
     <h1 class="my-3 text-4xl font-bold">{post.data.title}</h1>
     <div class="prose flex items-center gap-2">
