@@ -7,7 +7,7 @@ const fontFamily = "Noto Sans JP";
 export const getOgImage = async (text: string) => {
   const fontData = await fetchFont();
 
-  const MAX_LENGTH = 27;
+  const MAX_LENGTH = 40;
   const truncatedText =
     text.length > MAX_LENGTH ? text.substring(0, MAX_LENGTH - 1) + "…" : text;
 
@@ -21,7 +21,7 @@ export const getOgImage = async (text: string) => {
         height: "100%",
         width: "100%",
         backgroundColor: "#083D77",
-        padding: "24px",
+        padding: "32px",
         fontFamily: `"${fontFamily}", sans-serif`,
       }}
     >
@@ -31,13 +31,13 @@ export const getOgImage = async (text: string) => {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          rowGap: "24px",
+          rowGap: "32px",
           height: "100%",
           width: "100%",
-          border: "2px solid #333",
-          borderRadius: "8px",
+          border: "3px solid #333",
+          borderRadius: "12px",
           backgroundColor: "#FFF",
-          padding: "24px 24px",
+          padding: "32px 32px",
         }}
       >
         <div
@@ -46,7 +46,7 @@ export const getOgImage = async (text: string) => {
             alignItems: "center",
             justifyContent: "flex-start",
             width: "100%",
-            fontSize: "24px",
+            fontSize: "32px",
             color: "#555",
           }}
         >
@@ -55,7 +55,7 @@ export const getOgImage = async (text: string) => {
         <div
           style={{
             flexGrow: "1",
-            fontSize: "48px",
+            fontSize: "72px",
             fontWeight: 700,
             color: "#333",
             alignItems: "center",
@@ -69,7 +69,7 @@ export const getOgImage = async (text: string) => {
             alignItems: "center",
             justifyContent: "flex-end",
             width: "100%",
-            fontSize: "24px",
+            fontSize: "32px",
             color: "#555",
           }}
         >
@@ -78,8 +78,8 @@ export const getOgImage = async (text: string) => {
       </section>
     </main>,
     {
-      width: 800,
-      height: 400,
+      width: 1200,
+      height: 630,
       fonts: [
         {
           name: "Noto Sans JP",
