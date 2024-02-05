@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   '@astrojs/check':
-    specifier: ^0.4.1
+    specifier: 0.4.1
     version: 0.4.1(prettier-plugin-astro@0.13.0)(prettier@3.2.4)(typescript@5.3.3)
   '@astrojs/react':
     specifier: 3.0.9
@@ -18,7 +18,7 @@ dependencies:
     specifier: 5.1.0
     version: 5.1.0(astro@4.3.0)(tailwindcss@3.4.1)
   '@tailwindcss/typography':
-    specifier: ^0.5.10
+    specifier: 0.5.10
     version: 0.5.10(tailwindcss@3.4.1)
   '@types/react':
     specifier: 18.2.52
@@ -27,16 +27,16 @@ dependencies:
     specifier: 18.2.18
     version: 18.2.18
   astro:
-    specifier: ^4.3.0
+    specifier: 4.3.0
     version: 4.3.0(typescript@5.3.3)
   astro-seo:
-    specifier: ^0.8.0
+    specifier: 0.8.0
     version: 0.8.0
   cdate:
-    specifier: ^0.0.7
+    specifier: 0.0.7
     version: 0.0.7
   daisyui:
-    specifier: ^4.6.1
+    specifier: 4.6.1
     version: 4.6.1(postcss@8.4.33)
   react:
     specifier: 18.2.0
@@ -45,63 +45,63 @@ dependencies:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
   satori:
-    specifier: ^0.10.13
+    specifier: 0.10.13
     version: 0.10.13
   sharp:
-    specifier: ^0.33.2
+    specifier: 0.33.2
     version: 0.33.2
   tailwindcss:
     specifier: 3.4.1
     version: 3.4.1
   typescript:
-    specifier: ^5.3.3
+    specifier: 5.3.3
     version: 5.3.3
 
 devDependencies:
   '@typescript-eslint/eslint-plugin':
-    specifier: ^6.20.0
+    specifier: 6.20.0
     version: 6.20.0(@typescript-eslint/parser@6.20.0)(eslint@8.56.0)(typescript@5.3.3)
   '@typescript-eslint/parser':
-    specifier: ^6.20.0
+    specifier: 6.20.0
     version: 6.20.0(eslint@8.56.0)(typescript@5.3.3)
   eslint:
-    specifier: ^8.56.0
+    specifier: 8.56.0
     version: 8.56.0
   eslint-config-prettier:
-    specifier: ^9.1.0
+    specifier: 9.1.0
     version: 9.1.0(eslint@8.56.0)
   eslint-formatter-friendly:
-    specifier: ^7.0.0
+    specifier: 7.0.0
     version: 7.0.0
   eslint-plugin-astro:
-    specifier: ^0.31.4
+    specifier: 0.31.4
     version: 0.31.4(eslint@8.56.0)
   npm-run-all:
-    specifier: ^4.1.5
+    specifier: 4.1.5
     version: 4.1.5
   prettier:
-    specifier: ^3.2.4
+    specifier: 3.2.4
     version: 3.2.4
   prettier-plugin-astro:
-    specifier: ^0.13.0
+    specifier: 0.13.0
     version: 0.13.0
   prettier-plugin-organize-imports:
-    specifier: ^3.2.4
+    specifier: 3.2.4
     version: 3.2.4(prettier@3.2.4)(typescript@5.3.3)
   prettier-plugin-tailwindcss:
-    specifier: ^0.5.11
+    specifier: 0.5.11
     version: 0.5.11(prettier-plugin-astro@0.13.0)(prettier-plugin-organize-imports@3.2.4)(prettier@3.2.4)
   textlint:
-    specifier: ^13.4.1
+    specifier: 13.4.1
     version: 13.4.1
   textlint-filter-rule-comments:
-    specifier: ^1.2.2
+    specifier: 1.2.2
     version: 1.2.2(textlint@13.4.1)
   textlint-rule-preset-ja-spacing:
-    specifier: ^2.3.0
+    specifier: 2.3.0
     version: 2.3.0
   textlint-rule-preset-ja-technical-writing:
-    specifier: ^10.0.1
+    specifier: 10.0.1
     version: 10.0.1(textlint@13.4.1)
 
 packages:
