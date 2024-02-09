@@ -9,12 +9,18 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            maxWidth: "100ch",
+            maxWidth: "none",
 
             img: {
-              maxWidth: "80%",
+              width: "100%",
+              maxWidth: "400px",
               marginLeft: "auto",
               marginRight: "auto",
+            },
+
+            h2: {
+              borderBottomWidth: "1px",
+              borderColor: "var(--tw-prose-headings)",
             },
           },
         },

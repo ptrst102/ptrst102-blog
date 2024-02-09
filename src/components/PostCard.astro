@@ -18,13 +18,13 @@ const updateAt = updateDate && cdate(updateDate).format("YYYY年M月D日");
 ---
 
 <article class="mb-6">
-  <h2>
+  <h2 class="mb-0.5">
     <a href={`/blog/${slug}`} class="link link-primary text-2xl font-bold">
       {title}
     </a>
   </h2>
 
-  <div class="flex items-center gap-2">
+  <div class="mb-0.5 flex items-center gap-2">
     <span class="flex items-center gap-0.5"
       ><Icon name="ic:baseline-access-time" />{publishAt}</span
     >

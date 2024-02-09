@@ -18,7 +18,7 @@ const { frontmatter } = Astro.props;
 <Layout title={`${frontmatter.title} | ${SITE_TITLE}`}>
   <Header />
   <Main title={frontmatter.title} description={frontmatter.description}>
-    <div class="prose w-full">
+    <div class="prose">
       <slot />
     </div>
   </Main>
