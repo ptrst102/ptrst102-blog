@@ -16,18 +16,18 @@ const publishAt = cdate(publishDate).format("YYYY年M月D日");
 const updateAt = updateDate && cdate(updateDate).format("YYYY年M月D日");
 ---
 
-<article class="p-2">
-  <h2 class="pb-2">
+<article class="mb-6">
+  <h2>
     <a href={`/blog/${slug}`} class="link link-primary text-2xl font-bold">
       {title}
     </a>
   </h2>
 
-  <div class="prose flex items-center gap-2">
+  <div class="flex items-center gap-2">
     <span>{publishAt} 公開</span>
     {updateAt && <span>{updateAt} 更新</span>}
   </div>
   <div class="space-x-1">
-    {tags.filter((tag) => !!tag).map((tag) => <Tag name={tag} />)}
+    {tags.map((tag) => <Tag name={tag} small />)}
   </div>
 </article>

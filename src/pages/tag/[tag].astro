@@ -1,10 +1,14 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
+import Main from "@/layouts/Main.astro";
 import { getPosts } from "@/utils/getPosts";
 import { getUniqueTags } from "@/utils/getUniqueTags";
 import { getPostsByTag } from "@/utils/getPostsByTag";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
 import PostCard from "@/components/PostCard.astro";
+import { SITE_TITLE } from "@/config";
 
 interface Props {
   posts: CollectionEntry<"blog">[];
@@ -31,10 +35,9 @@ export const getStaticPaths = async () => {
 const { tag, posts } = Astro.props;
 ---
 
-<Layout title={`タグ: ${tag}`} seo={{ openGraph: { type: "article" } }}>
-  <section class="content">
-    <h1 class="heading_text">{`#${tag}`}</h1>
-
+<Layout title={`タグ: ${tag} | ${SITE_TITLE}`}>
+  <Header />
+  <Main title={`タグ: ${tag}`} description=`タグ: ${tag}の記事一覧です。`>
     {
       posts.map((post) => {
         return (
@@ -48,15 +51,6 @@ const { tag, posts } = Astro.props;
         );
       })
     }
-  </section>
+  </Main>
+  <Footer />
 </Layout>
-<style>
-  .content {
-    @apply p-2;
-  }
-
-  .heading_text {
-    @apply text-2xl font-bold;
-    @apply mb-3;
-  }
-</style>

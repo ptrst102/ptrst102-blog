@@ -1,4 +1,4 @@
-import { BLOG_TITLE } from "@/config";
+import { SITE_TITLE } from "@/config";
 import satori from "satori";
 import sharp from "sharp";
 
@@ -20,7 +20,7 @@ export const getOgImage = async (text: string) => {
         justifyContent: "space-between",
         height: "100%",
         width: "100%",
-        backgroundColor: "#083D77",
+        backgroundColor: "#059669",
         padding: "32px",
         fontFamily: `"${fontFamily}", sans-serif`,
       }}
@@ -50,7 +50,7 @@ export const getOgImage = async (text: string) => {
             color: "#555",
           }}
         >
-          <span>{BLOG_TITLE}</span>
+          <span>{SITE_TITLE}</span>
         </div>
         <div
           style={{

@@ -1,35 +1,33 @@
 ---
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import { BLOG_TITLE } from "@/config";
 import { SEO } from "astro-seo";
 
 interface Props {
   title: string;
-  seo: SEOProps;
+  description?: string;
+  openGraphType?: "website" | "article";
+  openGraphImage?: string;
 }
 
-interface SEOProps {
-  openGraph: {
-    type: string;
-    image?: string;
-  };
-}
-
-const { title, seo } = Astro.props;
+const {
+  title,
+  description = "",
+  openGraphType = "website",
+  openGraphImage = "",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="ja">
+<html lang="ja" class="overflow-y-scroll">
   <head>
     <SEO
-      title={`${title} | ${BLOG_TITLE}`}
+      title={title}
+      description={description}
       charset="UTF-8"
       openGraph={{
         basic: {
           title,
-          type: seo.openGraph.type,
-          image: seo.openGraph.image ?? "",
+          type: openGraphType,
+          image: openGraphImage,
         },
         article: {
           authors: ["ptrst102"],
@@ -56,13 +54,7 @@ const { title, seo } = Astro.props;
       }}
     />
   </head>
-  <body>
-    <Header />
-
-    <main class="mx-auto my-2 w-full max-w-screen-sm">
-      <slot />
-    </main>
-
-    <Footer />
+  <body class="flex min-h-screen flex-col">
+    <slot />
   </body>
 </html>

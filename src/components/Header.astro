@@ -1,9 +1,21 @@
 ---
-import { BLOG_TITLE } from "@/config";
+import { Image } from "astro:assets";
+import logo from "@/assets/logo.png";
 ---
 
 <header
-  class="flex h-16 items-center justify-center bg-neutral text-neutral-content shadow-lg"
+  class="sticky top-0 z-50 h-16 w-full border-b-4 border-neutral bg-base-100 bg-opacity-80 px-4 backdrop-blur"
 >
-  <a href="/" class="text-2xl font-extrabold hover:underline">{BLOG_TITLE}</a>
+  <div
+    class="mx-auto flex h-full w-full max-w-6xl items-center justify-between"
+  >
+    <a href="/">
+      <Image src={logo} alt="ptrst102どっとこむ" class="h-8 w-auto" />
+    </a>
+    <nav class="flex items-center justify-evenly">
+      <a href="/" class="btn btn-ghost">TOP</a>
+      <a href="/tag" class="btn btn-ghost">タグ</a>
+      <a href="/profile" class="btn btn-ghost">プロフィール</a>
+    </nav>
+  </div>
 </header>
