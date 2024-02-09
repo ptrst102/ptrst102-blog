@@ -15,8 +15,7 @@ import { Icon } from "astro-icon/components";
     </a>
 
     <nav class="hidden items-center justify-evenly sm:flex">
-      <a href="/" class="btn btn-ghost">TOP</a>
-      <a href="/tag" class="btn btn-ghost">タグ</a>
+      <a href="/tag" class="btn btn-ghost">タグ一覧</a>
       <a href="/profile" class="btn btn-ghost">プロフィール</a>
     </nav>
 
@@ -28,6 +27,7 @@ import { Icon } from "astro-icon/components";
         aria-expanded="false"
         class="btn btn-circle btn-ghost"
         aria-controls="dropdownMenu"
+        aria-label="メニューを開く"
       >
         <Icon name="ic:baseline-density-medium" class="h-5 w-5" />
       </div>
@@ -37,8 +37,7 @@ import { Icon } from "astro-icon/components";
         class="menu dropdown-content z-[1] w-32 rounded-box bg-neutral p-2 text-neutral-content shadow-lg"
         aria-label="メインナビゲーション"
       >
-        <li><a href="/">TOP</a></li>
-        <li><a href="/tag">タグ</a></li>
+        <li><a href="/tag">タグ一覧</a></li>
         <li><a href="/profile">プロフィール</a></li>
       </ul>
     </div>
