@@ -7,12 +7,23 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Noto Sans JP Variable"', "sans-serif"],
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Helvetica Neue"',
+          '"Segoe UI"',
+          '"Hiragino Kaku Gothic ProN"',
+          '"Hiragino Sans"',
+          "Arial",
+          "Meiryo",
+          "sans-serif",
+        ],
       },
 
       typography: {
         DEFAULT: {
           css: {
+            color: false,
             maxWidth: "none",
 
             img: {
