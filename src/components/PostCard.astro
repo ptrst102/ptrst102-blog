@@ -1,6 +1,7 @@
 ---
 import { cdate } from "@/lib/cdate";
 import Tag from "./Tag.astro";
+import { Icon } from "astro-icon/components";
 
 interface Props {
   publishDate: Date;
@@ -24,8 +25,17 @@ const updateAt = updateDate && cdate(updateDate).format("YYYY年M月D日");
   </h2>
 
   <div class="flex items-center gap-2">
-    <span>{publishAt} 公開</span>
-    {updateAt && <span>{updateAt} 更新</span>}
+    <span class="flex items-center gap-0.5"
+      ><Icon name="ic:baseline-access-time" />{publishAt}</span
+    >
+    {
+      updateAt && (
+        <span class="flex items-center gap-0.5">
+          <Icon name="ic:baseline-update" />
+          {updateAt}
+        </span>
+      )
+    }
   </div>
   <div class="space-x-1">
     {tags.map((tag) => <Tag name={tag} small />)}
