@@ -1,1 +1,1 @@
-export const BLOG_TITLE = "ptrst102どっとこむ";
+export const SITE_TITLE = "ptrst102どっとこむ";

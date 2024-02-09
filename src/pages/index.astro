@@ -2,36 +2,33 @@
 import Layout from "@/layouts/Layout.astro";
 import { getPosts } from "@/utils/getPosts";
 import { getSortedPosts } from "@/utils/getSortedPosts";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
 import PostCard from "@/components/PostCard.astro";
+import { SITE_TITLE } from "@/config";
 
 const posts = await getPosts();
 const sortedPosts = getSortedPosts(posts);
 ---
 
-<Layout title="TOP" seo={{ openGraph: { type: "website" } }}>
-  <section class="content">
-    {
-      sortedPosts.map((post) => {
-        return (
-          <PostCard
-            slug={post.slug}
-            publishDate={post.data.publishDate}
-            updateDate={post.data.updateDate}
-            title={post.data.title}
-            tags={post.data.tags}
-          />
-        );
-      })
-    }
-  </section>
+<Layout title={SITE_TITLE}>
+  <Header />
+  <main class="mx-auto w-full max-w-3xl px-4 pb-20 pt-6">
+    <section>
+      {
+        sortedPosts.map((post) => {
+          return (
+            <PostCard
+              slug={post.slug}
+              publishDate={post.data.publishDate}
+              updateDate={post.data.updateDate}
+              title={post.data.title}
+              tags={post.data.tags}
+            />
+          );
+        })
+      }
+    </section>
+  </main>
+  <Footer />
 </Layout>
-<style>
-  .content {
-    @apply p-2;
-  }
-
-  .heading_text {
-    @apply text-2xl font-bold;
-    @apply mb-3;
-  }
-</style>

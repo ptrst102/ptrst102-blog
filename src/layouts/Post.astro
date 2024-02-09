@@ -1,0 +1,55 @@
+---
+import Layout from "./Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Tag from "@/components/Tag.astro";
+import type { CollectionEntry } from "astro:content";
+import { cdate } from "@/lib/cdate";
+import { SITE_TITLE } from "@/config";
+
+export interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+
+const { title, tags } = post.data;
+
+const { Content } = await post.render();
+
+const publishAt = cdate(post.data.publishDate).format("YYYY年M月D日");
+const updateAt =
+  post.data.updateDate && cdate(post.data.updateDate).format("YYYY年M月D日");
+---
+
+<Layout
+  title={`${title} | ${SITE_TITLE}`}
+  openGraphType="article"
+  openGraphImage={new URL(
+    `/og/${post.slug}.png`,
+    import.meta.env.SITE,
+  ).toString()}
+>
+  <Header />
+
+  <main class="mx-auto w-full max-w-3xl px-4 pb-20 pt-6">
+    <section class="mb-4">
+      <h1 class="mb-2 text-3xl font-bold lg:text-4xl">{title}</h1>
+      <div class="mb-2 flex items-center gap-2 text-primary">
+        <span>{publishAt} 公開</span>
+        {updateAt && <span>{updateAt} 更新</span>}
+      </div>
+      <div class="space-x-1">
+        {tags.map((tag) => <Tag name={tag} />)}
+      </div>
+    </section>
+
+    <section>
+      <article class="prose w-full">
+        <Content />
+      </article>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

@@ -5,18 +5,32 @@ import daisyui from "daisyui";
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: "100ch",
+
+            img: {
+              maxWidth: "80%",
+              marginLeft: "auto",
+              marginRight: "auto",
+            },
+          },
+        },
+      },
+    },
   },
   plugins: [typography, daisyui],
   daisyui: {
     themes: [
       {
         mytheme: {
-          primary: "#40A2D8",
-          secondary: "#F0EDCF",
-          accent: "#FF0000",
-          neutral: "#083D77",
-          "base-100": "#FFFFFF",
+          primary: "#059669",
+          secondary: "#f472b6",
+          accent: "#f9a8d4",
+          neutral: "#bbf7d0",
+          "base-100": "#fffbec",
           "--animation-btn": 0,
         },
       },

@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Main from "@/layouts/Main.astro";
+import { getPosts } from "@/utils/getPosts";
+import { getUniqueTags } from "@/utils/getUniqueTags";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE_TITLE } from "@/config";
+import Tag from "@/components/Tag.astro";
+
+const posts = await getPosts();
+const tags = getUniqueTags(posts);
+---
+
+<Layout title=`タグ | ${SITE_TITLE}`>
+  <Header />
+  <Main title="タグ" description="当ブログで使用されているタグ一覧です。">
+    {tags.map((tag) => <Tag name={tag} />)}
+  </Main>
+  <Footer />
+</Layout>

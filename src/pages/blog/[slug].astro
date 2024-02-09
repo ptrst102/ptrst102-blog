@@ -1,9 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import Layout from "@/layouts/Layout.astro";
-import { cdate } from "@/lib/cdate";
 import { getPosts } from "@/utils/getPosts";
-import Tag from "@/components/Tag.astro";
+import Post from "@/layouts/Post.astro";
 
 interface Props {
   post: CollectionEntry<"blog">;
@@ -21,42 +19,6 @@ export const getStaticPaths = async () => {
 };
 
 const { post } = Astro.props;
-const { Content } = await post.render();
-
-const publishAt = cdate(post.data.publishDate).format("YYYY年M月D日");
-const updateAt =
-  post.data.updateDate && cdate(post.data.updateDate).format("YYYY年M月D日");
 ---
 
-<Layout
-  title={post.data.title}
-  seo={{
-    openGraph: {
-      type: "article",
-      image: new URL(`/og/${post.slug}.png`, import.meta.env.SITE).toString(),
-    },
-  }}
->
-  <section class="content">
-    <h1 class="my-3 text-4xl font-bold">{post.data.title}</h1>
-    <div class="prose flex items-center gap-2">
-      <span>{publishAt} 公開</span>
-      {updateAt && <span>{updateAt} 更新</span>}
-    </div>
-    <div class="space-x-1">
-      {post.data.tags.filter((tag) => !!tag).map((tag) => <Tag name={tag} />)}
-    </div>
-  </section>
-
-  <section class="content">
-    <article class="prose">
-      <Content />
-    </article>
-  </section>
-</Layout>
-
-<style>
-  .content {
-    @apply p-4;
-  }
-</style>
+<Post post={post} />
