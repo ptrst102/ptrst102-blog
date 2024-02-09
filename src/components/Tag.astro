@@ -1,5 +1,6 @@
 ---
 import { twMerge } from "tailwind-merge";
+import { Icon } from "astro-icon/components";
 
 interface Props {
   name: string;
@@ -10,5 +11,8 @@ const { name, small = false } = Astro.props;
 
 <a
   href={`/tag/${encodeURI(name)}`}
-  class={twMerge("btn btn-secondary", small ? "btn-xs" : "btn-sm")}>#{name}</a
+  class={twMerge("btn btn-secondary gap-0.5", small ? "btn-xs" : "btn-sm")}
 >
+  <Icon name="ic:baseline-tag" />
+  {name}
+</a>
