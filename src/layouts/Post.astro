@@ -32,22 +32,23 @@ const updateAt =
 >
   <Header />
 
-  <main class="mx-auto w-full max-w-3xl px-4 pb-20 pt-6">
-    <section class="mb-4">
-      <h1 class="mb-2 text-3xl font-bold lg:text-4xl">{title}</h1>
-      <div class="mb-2 flex items-center gap-2 text-primary">
+  <main class="mx-auto w-full max-w-3xl px-4 pb-12 pt-6">
+    <section class="mb-8">
+      <h1 class="mb-6 text-center text-4xl font-bold lg:text-5xl">{title}</h1>
+      <div class="mb-2 flex items-center justify-end gap-2 text-primary">
         <span>{publishAt} 公開</span>
         {updateAt && <span>{updateAt} 更新</span>}
       </div>
+    </section>
+    <section class="mb-12">
+      <article class="prose">
+        <Content />
+      </article>
+    </section>
+    <section>
       <div class="space-x-1">
         {tags.map((tag) => <Tag name={tag} />)}
       </div>
-    </section>
-
-    <section>
-      <article class="prose w-full">
-        <Content />
-      </article>
     </section>
   </main>
 
