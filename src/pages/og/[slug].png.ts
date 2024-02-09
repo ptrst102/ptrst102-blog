@@ -1,5 +1,5 @@
 import { getOgImage } from "@/components/OgImage";
-import { getPosts } from "@/lib/getPosts";
+import { getPosts } from "@/utils/getPosts";
 import type { APIContext } from "astro";
 
 export const getStaticPaths = async () => {

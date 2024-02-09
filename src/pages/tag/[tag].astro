@@ -1,7 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
-import { getPosts } from "@/lib/getPosts";
+import { getPosts } from "@/utils/getPosts";
+import { getUniqueTags } from "@/utils/getUniqueTags";
+import { getPostsByTag } from "@/utils/getPostsByTag";
 import PostCard from "@/components/PostCard.astro";
 
 interface Props {
@@ -11,7 +13,7 @@ interface Props {
 
 export const getStaticPaths = async () => {
   const posts = await getPosts();
-  const tags = Array.from(new Set(posts.map(({ data }) => data.tags).flat()));
+  const tags = getUniqueTags(posts);
 
   return tags.map((tag) => {
     return {
@@ -20,7 +22,7 @@ export const getStaticPaths = async () => {
       },
       props: {
         tag,
-        posts: posts.filter(({ data }) => data.tags.includes(tag)),
+        posts: getPostsByTag(posts, tag),
       },
     };
   });
