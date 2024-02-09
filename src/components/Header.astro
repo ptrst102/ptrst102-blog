@@ -21,12 +21,21 @@ import { Icon } from "astro-icon/components";
     </nav>
 
     <div class="dropdown dropdown-end sm:hidden">
-      <div tabindex="0" role="button" class="btn btn-circle btn-ghost">
+      <div
+        tabindex="0"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+        class="btn btn-circle btn-ghost"
+        aria-controls="dropdownMenu"
+      >
         <Icon name="ic:baseline-density-medium" class="h-5 w-5" />
       </div>
       <ul
+        id="dropdownMenu"
         tabindex="0"
         class="menu dropdown-content z-[1] w-32 rounded-box bg-neutral p-2 text-neutral-content shadow-lg"
+        aria-label="メインナビゲーション"
       >
         <li><a href="/">TOP</a></li>
         <li><a href="/tag">タグ</a></li>
