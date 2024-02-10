@@ -2,5 +2,8 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.documentSelectors": ["**/*.astro"],
-  "textlint.autoFixOnSave": true
+  "textlint.autoFixOnSave": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }
