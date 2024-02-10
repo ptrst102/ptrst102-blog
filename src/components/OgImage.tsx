@@ -20,7 +20,7 @@ export const getOgImage = async (text: string) => {
         justifyContent: "space-between",
         height: "100%",
         width: "100%",
-        backgroundColor: "#059669",
+        backgroundColor: "#bbf7d0",
         padding: "32px",
         fontFamily: `"${fontFamily}", sans-serif`,
       }}
@@ -34,9 +34,9 @@ export const getOgImage = async (text: string) => {
           rowGap: "32px",
           height: "100%",
           width: "100%",
-          border: "3px solid #333",
+          border: "6px solid #f472b6",
           borderRadius: "12px",
-          backgroundColor: "#FFF",
+          backgroundColor: "#fffbec",
           padding: "32px 32px",
         }}
       >
@@ -47,7 +47,7 @@ export const getOgImage = async (text: string) => {
             justifyContent: "flex-start",
             width: "100%",
             fontSize: "32px",
-            color: "#555",
+            color: "#059669",
           }}
         >
           <span>{SITE_TITLE}</span>
@@ -70,7 +70,7 @@ export const getOgImage = async (text: string) => {
             justifyContent: "flex-end",
             width: "100%",
             fontSize: "32px",
-            color: "#555",
+            color: "#059669",
           }}
         >
           <span>https://ptrst102.com</span>
