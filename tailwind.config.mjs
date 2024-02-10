@@ -6,20 +6,6 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      fontFamily: {
-        sans: [
-          "-apple-system",
-          "BlinkMacSystemFont",
-          '"Helvetica Neue"',
-          '"Segoe UI"',
-          '"Hiragino Kaku Gothic ProN"',
-          '"Hiragino Sans"',
-          "Arial",
-          "Meiryo",
-          "sans-serif",
-        ],
-      },
-
       typography: {
         DEFAULT: {
           css: {

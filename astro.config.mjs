@@ -9,7 +9,14 @@ import react from "@astrojs/react";
 export default defineConfig({
   prefetch: true,
   site: "https://ptrst102.com",
-  integrations: [tailwind(), sitemap(), react(), icon()],
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    sitemap(),
+    react(),
+    icon(),
+  ],
   markdown: {
     remarkPlugins: ["remark-breaks"],
     extendDefaultPlugins: true,
