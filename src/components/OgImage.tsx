@@ -1,4 +1,3 @@
-import { SITE_TITLE } from "@/config";
 import satori from "satori";
 import sharp from "sharp";
 
@@ -46,11 +45,15 @@ export const getOgImage = async (text: string) => {
             alignItems: "center",
             justifyContent: "flex-start",
             width: "100%",
-            fontSize: "32px",
+            fontSize: "48px",
             color: "#059669",
           }}
         >
-          <span>{SITE_TITLE}</span>
+          <img
+            src="https://ptrst102.com/logo.png"
+            alt="ptrst102どっとこむ"
+            style={{ height: "1em" }}
+          />
         </div>
         <div
           style={{
