@@ -12,3 +12,28 @@
     list-style: revert;
   }
 }
+
+/* remark-ogp-card */
+.prose .remark-card {
+  @apply p-2;
+}
+
+.prose .remark-card a {
+  @apply block rounded-box border bg-base-100 p-6 hover:bg-base-200 hover:bg-opacity-50;
+}
+
+.prose .remark-card .title {
+  @apply font-semibold;
+}
+
+.prose .remark-card .site {
+  @apply flex items-center gap-2;
+}
+
+.prose .remark-card .site .favicon {
+  @apply h-4 w-4;
+}
+
+.prose .remark-card .site .domain {
+  @apply opacity-80;
+}
