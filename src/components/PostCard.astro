@@ -19,7 +19,11 @@ const updateAt = updateDate && cdate(updateDate).format("YYYY年M月D日");
 
 <article class="mb-6">
   <h2 class="mb-1">
-    <a href={`/blog/${slug}`} class="link link-primary text-2xl font-bold">
+    <a
+      href={`/blog/${slug}`}
+      class="link link-primary text-2xl font-bold"
+      transition:name={title}
+    >
       {title}
     </a>
   </h2>
