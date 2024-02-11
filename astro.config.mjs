@@ -20,5 +20,8 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: ["remark-gfm", "remark-breaks", ogpCardPlugin],
+    remarkRehype: {
+      footnoteLabel: "脚注",
+    },
   },
 });
