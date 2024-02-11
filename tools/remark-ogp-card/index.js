@@ -56,7 +56,7 @@ const createCard = (url, domain, title) => {
     target="_blank"
     rel="noopener noreferrer"
   >
-    <h5 class="title">${title}</h5>
+    <span class="title">${title}</span>
     <div class="site">
       <img
         src="https://icons.duckduckgo.com/ip3/${domain}.ico"
