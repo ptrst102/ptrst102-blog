@@ -40,15 +40,7 @@ const { tag, posts } = Astro.props;
   <Main title={`タグ: ${tag}`} description=`タグ: ${tag}の記事一覧です。`>
     {
       posts.map((post) => {
-        return (
-          <PostCard
-            slug={post.slug}
-            publishDate={post.data.publishDate}
-            updateDate={post.data.updateDate}
-            title={post.data.title}
-            tags={post.data.tags}
-          />
-        );
+        return <PostCard post={post} />;
       })
     }
   </Main>

@@ -2,25 +2,24 @@
 import { cdate } from "@/lib/cdate";
 import Tag from "./Tag.astro";
 import { Icon } from "astro-icon/components";
+import type { CollectionEntry } from "astro:content";
+import { getDescription } from "@/utils/getDescription";
 
 interface Props {
-  publishDate: Date;
-  updateDate?: Date;
-  slug: string;
-  title: string;
-  tags: string[];
+  post: CollectionEntry<"blog">;
 }
 
-const { publishDate, updateDate, slug, title, tags } = Astro.props;
+const { publishDate, updateDate, title, tags } = Astro.props.post.data;
 
 const publishAt = cdate(publishDate).format("YYYY年M月D日");
 const updateAt = updateDate && cdate(updateDate).format("YYYY年M月D日");
+const description = getDescription(Astro.props.post);
 ---
 
 <article class="mb-6">
   <h2 class="mb-1">
     <a
-      href={`/blog/${slug}`}
+      href={`/blog/${Astro.props.post.slug}`}
       class="link link-primary text-2xl font-bold"
       transition:name={title}
     >
@@ -28,7 +27,7 @@ const updateAt = updateDate && cdate(updateDate).format("YYYY年M月D日");
     </a>
   </h2>
 
-  <div class="mb-1 flex items-center gap-2">
+  <div class="mb-1 flex items-center gap-2 text-sm">
     <span class="flex items-center gap-0.5"
       ><Icon name="ic:baseline-access-time" />{publishAt}</span
     >
@@ -41,7 +40,9 @@ const updateAt = updateDate && cdate(updateDate).format("YYYY年M月D日");
       )
     }
   </div>
-  <div class="space-x-1">
+  <div class="mb-1 space-x-1">
     {tags.map((tag) => <Tag name={tag} small />)}
   </div>
+  <p class="mb-1 text-sm">{description}</p>
+  <a href={`/blog/${Astro.props.post.slug}`} class="link">全文を見る</a>
 </article>

@@ -6,6 +6,7 @@ import Tag from "@/components/Tag.astro";
 import type { CollectionEntry } from "astro:content";
 import { cdate } from "@/lib/cdate";
 import { SITE_TITLE } from "@/config";
+import { getDescription } from "@/utils/getDescription";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -20,10 +21,12 @@ const { Content } = await post.render();
 const publishAt = cdate(post.data.publishDate).format("YYYY年M月D日");
 const updateAt =
   post.data.updateDate && cdate(post.data.updateDate).format("YYYY年M月D日");
+const description = getDescription(post);
 ---
 
 <Layout
   title={`${title} | ${SITE_TITLE}`}
+  description={description}
   openGraphType="article"
   openGraphImage={new URL(
     `/og/${post.slug}.png`,

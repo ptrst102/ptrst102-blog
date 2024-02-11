@@ -17,15 +17,7 @@ const sortedPosts = getSortedPosts(posts);
     <section>
       {
         sortedPosts.map((post) => {
-          return (
-            <PostCard
-              slug={post.slug}
-              publishDate={post.data.publishDate}
-              updateDate={post.data.updateDate}
-              title={post.data.title}
-              tags={post.data.tags}
-            />
-          );
+          return <PostCard post={post} />;
         })
       }
     </section>
