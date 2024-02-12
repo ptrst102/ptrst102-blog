@@ -15,7 +15,7 @@
 
 /* remark-ogp-card */
 .prose .remark-card {
-  @apply p-2;
+  @apply py-2;
 }
 
 .prose .remark-card a {
@@ -23,7 +23,11 @@
 }
 
 .prose .remark-card .title {
-  @apply font-semibold;
+  @apply mb-1 font-semibold;
+}
+
+.prose .remark-card .description {
+  @apply mb-1 text-sm opacity-80;
 }
 
 .prose .remark-card .site {
@@ -35,5 +39,5 @@
 }
 
 .prose .remark-card .site .domain {
-  @apply opacity-80;
+  @apply text-sm opacity-80;
 }

@@ -28,7 +28,7 @@ const ogpCardPlugin = () => {
 
           const cardNode = {
             type: "html",
-            value: createCard(url, extractDomain(url), result.ogTitle),
+            value: createCard(url, extractDomain(url), result),
           };
 
           tree.children.splice(index, 1, cardNode);
@@ -48,7 +48,7 @@ const ogpCardPlugin = () => {
 
 export default ogpCardPlugin;
 
-const createCard = (url, domain, title) => {
+const createCard = (url, domain, result) => {
   return `
 <div class="not-prose remark-card">
   <a
@@ -56,7 +56,8 @@ const createCard = (url, domain, title) => {
     target="_blank"
     rel="noopener noreferrer"
   >
-    <span class="title">${title}</span>
+    <p class="title">${result.ogTitle}</p>
+    <p class="description">${result.ogDescription}</p>
     <div class="site">
       <img
         src="https://icons.duckduckgo.com/ip3/${domain}.ico"

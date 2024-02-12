@@ -21,8 +21,10 @@ export default {
 
             h2: {
               borderBottomWidth: "1px",
-              borderColor: "var(--tw-prose-headings)",
             },
+
+            "blockquote p:first-of-type::before": { content: "none" },
+            "blockquote p:first-of-type::after": { content: "none" },
           },
         },
       },
