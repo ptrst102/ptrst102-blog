@@ -15,7 +15,7 @@
     "lint": "run-p lint:*",
     "lint:eslint": "eslint . --format friendly",
     "lint:prettier": "prettier . --check",
-    "lint:textlint": "textlint src/posts/**/*.md"
+    "lint:textlint": "textlint src/content/**/*.md"
   },
   "dependencies": {
     "@astrojs/check": "0.5.2",
