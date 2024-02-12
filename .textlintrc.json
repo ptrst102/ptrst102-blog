@@ -1,7 +1,16 @@
 {
   "rules": {
     "preset-ja-technical-writing": {
-      "no-exclamation-question-mark": false
+      "no-exclamation-question-mark": false,
+      "ja-unnatural-alphabet": {
+        "allow": ["dアニメストア"]
+      },
+      "sentence-length": {
+        "max": 200
+      },
+      "no-doubled-joshi": {
+        "allow": ["も", "や"]
+      }
     },
     "preset-ja-spacing": true
   },

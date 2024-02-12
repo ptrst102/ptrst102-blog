@@ -15,7 +15,7 @@ const tags = getUniqueTags(posts);
 <Layout title=`タグ一覧 | ${SITE_TITLE}`>
   <Header />
   <Main title="タグ一覧" description="当ブログで使用されているタグ一覧です。">
-    {tags.map((tag) => <Tag name={tag} />)}
+    <div class="space-x-1">{tags.map((tag) => <Tag name={tag} />)}</div>
   </Main>
   <Footer />
 </Layout>
