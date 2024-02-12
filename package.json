@@ -18,7 +18,7 @@
     "lint:textlint": "textlint src/content/**/*.md"
   },
   "dependencies": {
-    "@astrojs/check": "0.5.2",
+    "@astrojs/check": "0.5.3",
     "@astrojs/react": "3.0.10",
     "@astrojs/sitemap": "3.0.5",
     "@astrojs/tailwind": "5.1.0",
