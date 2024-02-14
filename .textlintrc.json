@@ -10,7 +10,8 @@
       },
       "no-doubled-joshi": {
         "allow": ["も", "や"]
-      }
+      },
+      "ja-no-weak-phrase": false
     },
     "preset-ja-spacing": true
   },
