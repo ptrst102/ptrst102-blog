@@ -60,7 +60,7 @@ const createCard = (url, domain, result) => {
     <p class="description">${result.ogDescription}</p>
     <div class="site">
       <img
-        src="https://icons.duckduckgo.com/ip3/${domain}.ico"
+        src="https://s2.googleusercontent.com/s2/favicons?domain=${domain}"
         alt="favicon"
         class="favicon"
       />
