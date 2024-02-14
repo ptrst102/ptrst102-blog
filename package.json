@@ -59,7 +59,7 @@
     "textlint-rule-preset-ja-technical-writing": "10.0.1"
   },
   "volta": {
-    "node": "20.11.0"
+    "node": "20.11.1"
   },
   "packageManager": "pnpm@8.15.2"
 }
