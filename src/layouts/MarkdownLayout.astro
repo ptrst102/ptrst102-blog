@@ -4,6 +4,7 @@ import Header from "@/components/Header.astro";
 import Layout from "./Layout.astro";
 import Main from "./Main.astro";
 import { SITE_TITLE } from "@/config";
+import Drawer from "@/layouts/Drawer.astro";
 
 export interface Props {
   frontmatter: {
@@ -16,11 +17,13 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={`${frontmatter.title} | ${SITE_TITLE}`}>
-  <Header />
-  <Main title={frontmatter.title} description={frontmatter.description}>
-    <div class="prose">
-      <slot />
-    </div>
-  </Main>
-  <Footer />
+  <Drawer>
+    <Header />
+    <Main title={frontmatter.title} description={frontmatter.description}>
+      <div class="prose">
+        <slot />
+      </div>
+    </Main>
+    <Footer />
+  </Drawer>
 </Layout>

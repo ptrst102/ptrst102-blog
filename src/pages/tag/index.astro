@@ -7,15 +7,18 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { SITE_TITLE } from "@/config";
 import Tag from "@/components/Tag.astro";
+import Drawer from "@/layouts/Drawer.astro";
 
 const posts = await getPosts();
 const tags = getUniqueTags(posts);
 ---
 
 <Layout title=`タグ一覧 | ${SITE_TITLE}`>
-  <Header />
-  <Main title="タグ一覧" description="当ブログで使用されているタグ一覧です。">
-    <div class="space-x-1">{tags.map((tag) => <Tag name={tag} />)}</div>
-  </Main>
-  <Footer />
+  <Drawer>
+    <Header />
+    <Main title="タグ一覧" description="当ブログで使用されているタグ一覧です。">
+      <div class="space-x-1">{tags.map((tag) => <Tag name={tag} />)}</div>
+    </Main>
+    <Footer />
+  </Drawer>
 </Layout>

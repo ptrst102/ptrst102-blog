@@ -4,42 +4,23 @@ import logo from "@/assets/logo.svg";
 import { Icon } from "astro-icon/components";
 ---
 
-<header
-  class="sticky top-0 z-50 h-16 w-full border-b-4 border-neutral bg-base-100 bg-opacity-80 px-4 backdrop-blur"
->
+<header class="sticky top-0 z-10 h-16 w-full px-4">
   <div
-    class="mx-auto flex h-full w-full max-w-6xl items-center justify-between"
+    class="mx-auto flex h-full w-full max-w-6xl items-center justify-between gap-4"
   >
-    <a href="/">
-      <Image src={logo} alt="ptrst102どっとこむ" class="h-8 w-auto" />
-    </a>
-
-    <nav class="hidden items-center justify-evenly sm:flex">
-      <a href="/tag" class="btn btn-ghost">タグ一覧</a>
-      <a href="/profile" class="btn btn-ghost">プロフィール</a>
-    </nav>
-
-    <div class="dropdown dropdown-end sm:hidden">
-      <div
-        tabindex="0"
-        role="button"
-        aria-haspopup="true"
-        aria-expanded="false"
-        class="btn btn-circle btn-ghost"
-        aria-controls="dropdownMenu"
-        aria-label="メニューを開く"
-      >
-        <Icon name="ic:baseline-density-medium" class="h-5 w-5" />
-      </div>
-      <ul
-        id="dropdownMenu"
-        tabindex="0"
-        class="menu dropdown-content z-[1] w-48 rounded-box bg-neutral p-2 text-neutral-content shadow-lg"
-        aria-label="メインナビゲーション"
-      >
-        <li><a href="/tag">タグ一覧</a></li>
-        <li><a href="/profile">プロフィール</a></li>
-      </ul>
+    <label
+      for="my-drawer"
+      role="button"
+      aria-controls="drawer"
+      class="btn btn-square lg:hidden"
+      aria-label="メニューを開く"
+    >
+      <Icon name="ic:baseline-density-medium" class="h-5 w-5" />
+    </label>
+    <div class="flex-1">
+      <a href="/">
+        <Image src={logo} alt="ptrst102どっとこむ" class="h-8 w-auto" />
+      </a>
     </div>
   </div>
 </header>

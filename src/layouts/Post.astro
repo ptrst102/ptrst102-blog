@@ -7,6 +7,7 @@ import type { CollectionEntry } from "astro:content";
 import { cdate } from "@/lib/cdate";
 import { SITE_TITLE } from "@/config";
 import { getDescription } from "@/utils/getDescription";
+import Drawer from "@/layouts/Drawer.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -33,29 +34,33 @@ const description = getDescription(post);
     import.meta.env.SITE,
   ).toString()}
 >
-  <Header />
+  <Drawer>
+    <Header />
 
-  <main class="mx-auto w-full max-w-3xl px-4 pb-12 pt-6">
-    <section class="mb-8">
-      <h1 class="mb-6 text-center text-4xl font-bold text-primary lg:text-5xl">
-        {title}
-      </h1>
-      <div class="mb-2 flex items-center justify-end gap-2">
-        <span>{publishAt} 公開</span>
-        {updateAt && <span>{updateAt} 更新</span>}
-      </div>
-    </section>
-    <section class="mb-12">
-      <article class="prose">
-        <Content />
-      </article>
-    </section>
-    <section>
-      <div class="space-x-1">
-        {tags.map((tag) => <Tag name={tag} />)}
-      </div>
-    </section>
-  </main>
+    <main class="mx-auto w-full max-w-3xl px-4 pb-12 pt-6">
+      <section class="mb-8">
+        <h1
+          class="mb-6 text-center text-4xl font-bold text-primary lg:text-5xl"
+        >
+          {title}
+        </h1>
+        <div class="mb-2 flex items-center justify-end gap-2">
+          <span>{publishAt} 公開</span>
+          {updateAt && <span>{updateAt} 更新</span>}
+        </div>
+      </section>
+      <section class="mb-12">
+        <article class="prose">
+          <Content />
+        </article>
+      </section>
+      <section>
+        <div class="space-x-1">
+          {tags.map((tag) => <Tag name={tag} />)}
+        </div>
+      </section>
+    </main>
 
-  <Footer />
+    <Footer />
+  </Drawer>
 </Layout>
