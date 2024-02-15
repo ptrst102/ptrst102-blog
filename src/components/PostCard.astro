@@ -1,9 +1,9 @@
 ---
 import { cdate } from "@/lib/cdate";
-import Tag from "./Tag.astro";
+import { getDescription } from "@/utils/getDescription";
 import { Icon } from "astro-icon/components";
 import type { CollectionEntry } from "astro:content";
-import { getDescription } from "@/utils/getDescription";
+import Tag from "./Tag.astro";
 
 interface Props {
   post: CollectionEntry<"blog">;

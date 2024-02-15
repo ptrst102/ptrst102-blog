@@ -1,12 +1,12 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Drawer from "@/layouts/Drawer.astro";
-import { getPosts } from "@/utils/getPosts";
-import { getSortedPosts } from "@/utils/getSortedPosts";
-import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
 import PostCard from "@/components/PostCard.astro";
 import { SITE_TITLE } from "@/config";
+import Drawer from "@/layouts/Drawer.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getPosts } from "@/utils/getPosts";
+import { getSortedPosts } from "@/utils/getSortedPosts";
 
 const posts = await getPosts();
 const sortedPosts = getSortedPosts(posts);
