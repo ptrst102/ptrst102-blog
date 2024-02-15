@@ -30,11 +30,7 @@
 
 @layer base {
   html {
-    font-family:
-      YakuHanJP,
-      "Noto Sans JP",
-      -apple-system,
-      sans-serif;
+    font-family: YakuHanJP, "Noto Sans JP", sans-serif;
     font-size: 17px;
   }
   ul,
