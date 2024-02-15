@@ -124,8 +124,8 @@ importers:
   tools/remark-ogp-card:
     dependencies:
       open-graph-scraper:
-        specifier: 6.3.4
-        version: 6.3.4
+        specifier: 6.4.0
+        version: 6.4.0
       unist-builder:
         specifier: 4.0.0
         version: 4.0.0
@@ -3811,6 +3811,13 @@ packages:
       safer-buffer: 2.1.2
     dev: false
 
+  /iconv-lite@0.6.3:
+    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      safer-buffer: 2.1.2
+    dev: false
+
   /ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
     dev: false
@@ -5246,12 +5253,13 @@ packages:
       mimic-fn: 4.0.0
     dev: false
 
-  /open-graph-scraper@6.3.4:
-    resolution: {integrity: sha512-V9Q94NmjRIHwrH36lCuhWNuszyiOXtoqfwChG1Cx4baatgcD9tfHB5520NNjKTyD+jSGk3ksvw2xCjMOgrGK9Q==}
+  /open-graph-scraper@6.4.0:
+    resolution: {integrity: sha512-UiSs39rqsYkIBf46yaGIxj6POMCgvQuGdWqRd0KtGLR6vo3ENxJLl5fyfOm1Y4cKubZvpKqSZ45DTR10wKH/KQ==}
     engines: {node: '>=18.0.0'}
     dependencies:
       chardet: 2.0.0
       cheerio: 1.0.0-rc.12
+      iconv-lite: 0.6.3
       undici: 6.6.2
       validator: 13.11.0
     dev: false
