@@ -1,0 +1,11 @@
+---
+import Sidebar from "@/components/Sidebar.astro";
+---
+
+<div class="drawer lg:drawer-open">
+  <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex min-h-svh flex-col">
+    <slot />
+  </div>
+  <Sidebar />
+</div>

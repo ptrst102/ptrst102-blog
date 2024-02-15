@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import profile from "@/assets/icon.jpg";
+import { Icon } from "astro-icon/components";
+---
+
+<div class="drawer-side z-40">
+  <label for="my-drawer" class="drawer-overlay"></label>
+  <aside
+    class="flex h-auto min-h-full w-80 flex-col bg-neutral px-2 pt-2 text-neutral-content"
+  >
+    <div class="mx-auto mb-6 mt-5 w-fit">
+      <a href="/">
+        <div class="avatar m-auto block">
+          <div class="w-32">
+            <Image class="mask mask-circle" src={profile} alt="Profile image" />
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <ul class="menu menu-md shrink grow overflow-y-auto">
+      <li><a class="py-3 text-base" href="/">ホーム</a></li>
+      <li>
+        <a class="py-3 text-base" href="/profile">プロフィール</a>
+      </li>
+      <li>
+        <a class="py-3 text-base" href="/tag">タグ一覧</a>
+      </li>
+    </ul>
+
+    <div
+      class="pointer-events-none sticky bottom-10 block h-24 justify-center bg-neutral [mask-image:linear-gradient(transparent,#000000)]"
+    >
+    </div>
+
+    <div
+      class="sticky bottom-0 flex w-full justify-center gap-4 self-center bg-neutral px-4 pb-5 pt-1"
+    >
+      <a href="https://twitter.com/ptrst102" class="link" aria-label="X"
+        ><Icon name="simple-icons:x" class="h-6 w-6" /></a
+      >
+      <a
+        href="https://github.com/ptrst102/ptrst102-blog"
+        class="link"
+        aria-label="GitHub"
+        ><Icon name="simple-icons:github" class="h-6 w-6" /></a
+      >
+    </div>
+  </aside>
+</div>

@@ -38,7 +38,7 @@ export default {
           primary: "#059669",
           secondary: "#f472b6",
           accent: "#f9a8d4",
-          neutral: "#bbf7d0",
+          neutral: "#dcfce7",
           "base-100": "#fffbec",
           "--animation-btn": 0,
         },

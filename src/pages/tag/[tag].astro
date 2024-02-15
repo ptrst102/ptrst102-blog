@@ -9,6 +9,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import PostCard from "@/components/PostCard.astro";
 import { SITE_TITLE } from "@/config";
+import Drawer from "@/layouts/Drawer.astro";
 
 interface Props {
   posts: CollectionEntry<"blog">[];
@@ -36,13 +37,15 @@ const { tag, posts } = Astro.props;
 ---
 
 <Layout title={`タグ: ${tag} | ${SITE_TITLE}`}>
-  <Header />
-  <Main title={`タグ: ${tag}`} description=`タグ: ${tag}の記事一覧です。`>
-    {
-      posts.map((post) => {
-        return <PostCard post={post} />;
-      })
-    }
-  </Main>
-  <Footer />
+  <Drawer>
+    <Header />
+    <Main title={`タグ: ${tag}`} description=`タグ: ${tag}の記事一覧です。`>
+      {
+        posts.map((post) => {
+          return <PostCard post={post} />;
+        })
+      }
+    </Main>
+    <Footer />
+  </Drawer>
 </Layout>
