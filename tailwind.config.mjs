@@ -9,7 +9,6 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            color: false,
             maxWidth: "none",
 
             img: {
