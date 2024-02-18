@@ -42,8 +42,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0
       astro-seo:
-        specifier: 0.8.0
-        version: 0.8.0
+        specifier: 0.8.1
+        version: 0.8.1(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.3.3)
       cdate:
         specifier: 0.0.7
         version: 0.0.7
@@ -2154,8 +2154,14 @@ packages:
       - supports-color
     dev: false
 
-  /astro-seo@0.8.0:
-    resolution: {integrity: sha512-7gq6lhibCM8FuzZIJlbLLWP5EJ9KL2/4XqeFrAg9O6ZK2xMFxJ5ubKf+a0VJwwTu8W8Xr421CmpiXu6Hq7n/7Q==}
+  /astro-seo@0.8.1(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.3.3):
+    resolution: {integrity: sha512-BDGtIXxs6gPZXjRkPMo7YeLxcYedxxrAoU4U5+EKaKxJQJLk14b0Ok5UM+LL7LjWg3fo18MPTAxdYYCoj3qKDw==}
+    dependencies:
+      '@astrojs/check': 0.5.4(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
+      - typescript
     dev: false
 
   /astro@4.4.0(typescript@5.3.3):
