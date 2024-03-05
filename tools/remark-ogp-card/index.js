@@ -57,7 +57,6 @@ const createCard = (url, domain, result) => {
     rel="noopener noreferrer"
   >
     <p class="title">${result.ogTitle}</p>
-    <p class="description">${result.ogDescription}</p>
     <div class="site">
       <img
         src="https://s2.googleusercontent.com/s2/favicons?domain=${domain}"

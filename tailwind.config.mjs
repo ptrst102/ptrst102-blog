@@ -13,7 +13,7 @@ export default {
 
             img: {
               width: "100%",
-              maxWidth: "400px",
+              maxWidth: "600px",
               marginLeft: "auto",
               marginRight: "auto",
             },
