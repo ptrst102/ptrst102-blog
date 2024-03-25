@@ -94,8 +94,8 @@ importers:
         specifier: 7.0.0
         version: 7.0.0
       eslint-plugin-astro:
-        specifier: 0.32.0
-        version: 0.32.0(eslint@8.57.0)
+        specifier: 0.33.0
+        version: 0.33.0(eslint@8.57.0)
       npm-run-all2:
         specifier: 6.1.2
         version: 6.1.2
@@ -2417,7 +2417,7 @@ packages:
       entities: 4.5.0
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
-      semver: 7.5.4
+      semver: 7.6.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3376,7 +3376,7 @@ packages:
       eslint: '>=6.0.0'
     dependencies:
       eslint: 8.57.0
-      semver: 7.5.4
+      semver: 7.6.0
     dev: true
 
   /eslint-config-prettier@9.1.0(eslint@8.57.0):
@@ -3399,8 +3399,8 @@ packages:
       text-table: 0.2.0
     dev: true
 
-  /eslint-plugin-astro@0.32.0(eslint@8.57.0):
-    resolution: {integrity: sha512-T8Chx9yG4vrWLCMkQGEbBvUJYSwMVXbw95+EpceFue/jr8JavjYw9A6K1xUxMyycnlWOGMiK7wJ5d/hHNsKBhg==}
+  /eslint-plugin-astro@0.33.0(eslint@8.57.0):
+    resolution: {integrity: sha512-Plvj8Kg1/4IbFThzhLSZ+tackLT/BR1VVkrmyDYDScZFxB6AmuTcn9d6SW71QL6xgnEKjGI8mQiTjSq8BdCl7Q==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=7.0.0'
@@ -5571,7 +5571,7 @@ packages:
     engines: {node: '>=10'}
     requiresBuild: true
     dependencies:
-      semver: 7.5.4
+      semver: 7.6.0
     dev: false
     optional: true
 
@@ -6772,7 +6772,6 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
-    dev: false
 
   /sentence-splitter@5.0.0:
     resolution: {integrity: sha512-9Mvf7L8vwpPzkH0/HtXzCbmVkyj4aQXdeG7h8ighRvO0hvcZEy2OUEjeIlnM/z4EX4vBacEfpESC65Oa2rWOig==}
@@ -6810,7 +6809,7 @@ packages:
       detect-libc: 2.0.2
       node-addon-api: 6.1.0
       prebuild-install: 7.1.1
-      semver: 7.5.4
+      semver: 7.6.0
       simple-get: 4.0.1
       tar-fs: 3.0.4
       tunnel-agent: 0.6.0
@@ -6824,7 +6823,7 @@ packages:
     dependencies:
       color: 4.2.3
       detect-libc: 2.0.2
-      semver: 7.5.4
+      semver: 7.6.0
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.33.2
       '@img/sharp-darwin-x64': 0.33.2
@@ -7801,7 +7800,7 @@ packages:
   /typescript-auto-import-cache@0.3.2:
     resolution: {integrity: sha512-+laqe5SFL1vN62FPOOJSUDTZxtgsoOXjneYOXIpx5rQ4UMiN89NAtJLpqLqyebv9fgQ/IMeeTX+mQyRnwvJzvg==}
     dependencies:
-      semver: 7.5.4
+      semver: 7.6.0
     dev: false
 
   /typescript@5.4.3:
@@ -8223,7 +8222,7 @@ packages:
     dependencies:
       '@volar/language-service': 2.1.5
       path-browserify: 1.0.1
-      semver: 7.5.4
+      semver: 7.6.0
       typescript-auto-import-cache: 0.3.2
       vscode-languageserver-textdocument: 1.0.11
       vscode-nls: 5.2.0
