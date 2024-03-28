@@ -26,7 +26,7 @@
     "@iconify-json/simple-icons": "1.1.97",
     "@tailwindcss/typography": "0.5.12",
     "@types/react": "18.2.73",
-    "@types/react-dom": "18.2.22",
+    "@types/react-dom": "18.2.23",
     "astro": "4.5.10",
     "astro-icon": "1.1.0",
     "astro-seo": "0.8.3",
