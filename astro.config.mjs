@@ -1,6 +1,5 @@
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-import compress from "astro-compress";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import ogpCardPlugin from "./tools/remark-ogp-card";
@@ -18,7 +17,7 @@ export default defineConfig({
     sitemap(),
     react(),
     icon(),
-    compress(),
+    // compress(),
   ],
   markdown: {
     remarkPlugins: ["remark-gfm", "remark-breaks", ogpCardPlugin],
