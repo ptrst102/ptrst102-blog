@@ -81,9 +81,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: 7.4.0
         version: 7.4.0(eslint@8.57.0)(typescript@5.4.3)
-      astro-compress:
-        specifier: 2.2.20
-        version: 2.2.20
+      compress-astro:
+        specifier: 0.0.2
+        version: 0.0.2
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -2163,21 +2163,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /astro-compress@2.2.20:
-    resolution: {integrity: sha512-OXBQJ0GwGKNWDtebTrVfA5x/jNCfbIftQ8iq6iqH2Qgc+IDbl+h0hz0RKa5H8yrxNINDWWUN8dtcehtf7Ez3Pw==}
-    dependencies:
-      '@types/csso': 5.0.4
-      '@types/html-minifier-terser': 7.0.2
-      csso: 5.0.5
-      files-pipe: 2.1.16
-      html-minifier-terser: 7.2.0
-      kleur: 4.1.5
-      lightningcss: 1.24.1
-      sharp: 0.33.3
-      svgo: 3.2.0
-      terser: 5.30.0
-    dev: true
-
   /astro-eslint-parser@0.16.3:
     resolution: {integrity: sha512-CGaBseNtunAV2DCpwBXqTKq8+9Tw65XZetMaC0FsMoZuLj0gxNIkbCf2QyKYScVrNOU7/ayfNdVw8ZCSHBiqCg==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -2748,6 +2733,21 @@ packages:
   /common-ancestor-path@1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
     dev: false
+
+  /compress-astro@0.0.2:
+    resolution: {integrity: sha512-x778RKAmjsG1TexoxvOwMlIe6SeYrB6wWcIS+IzCoIZ7pQADfO4LgekXJnbOiImhwI/2vU/RlC/9SGt0/RRB3A==}
+    dependencies:
+      '@types/csso': 5.0.4
+      '@types/html-minifier-terser': 7.0.2
+      csso: 5.0.5
+      files-pipe: 2.1.16
+      html-minifier-terser: 7.2.0
+      kleur: 4.1.5
+      lightningcss: 1.24.1
+      sharp: 0.33.3
+      svgo: 3.2.0
+      terser: 5.30.0
+    dev: true
 
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
