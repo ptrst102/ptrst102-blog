@@ -19,7 +19,7 @@ importers:
         version: 3.1.4
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.6.2(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5))(tailwindcss@3.4.3)
+        version: 5.1.0(astro@4.6.3(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5))(tailwindcss@3.4.3)
       '@iconify-json/ic':
         specifier: 1.1.17
         version: 1.1.17
@@ -36,8 +36,8 @@ importers:
         specifier: 18.2.25
         version: 18.2.25
       astro:
-        specifier: 4.6.2
-        version: 4.6.2(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5)
+        specifier: 4.6.3
+        version: 4.6.3(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5)
       astro-icon:
         specifier: 1.1.0
         version: 1.1.0
@@ -1346,8 +1346,8 @@ packages:
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
 
-  astro@4.6.2:
-    resolution: {integrity: sha512-Kl+Wd7MJMQFnI3+V0JxF4HPbs8M67eltqQgtztReOwDLSl0VnOd39rM61W/3LEh10FZ0F13xrDgtdgfXzuLVbg==}
+  astro@4.6.3:
+    resolution: {integrity: sha512-p2zs1Gac+ysdc/yFCoc8pOXTZE5L9foAtmqUzUVL22WX68bYTRovd03GRs7J1MDpwzsl9kJtlK20ROpjyIFpNw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4663,9 +4663,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.22.4
 
-  '@astrojs/tailwind@5.1.0(astro@4.6.2(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5))(tailwindcss@3.4.3)':
+  '@astrojs/tailwind@5.1.0(astro@4.6.3(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5))(tailwindcss@3.4.3)':
     dependencies:
-      astro: 4.6.2(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5)
+      astro: 4.6.3(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5)
       autoprefixer: 10.4.17(postcss@8.4.33)
       postcss: 8.4.33
       postcss-load-config: 4.0.2(postcss@8.4.33)
@@ -6011,7 +6011,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.6.2(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5):
+  astro@4.6.3(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.7.1
       '@astrojs/internal-helpers': 0.4.0
