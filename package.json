@@ -23,7 +23,7 @@
     "@astrojs/sitemap": "3.1.4",
     "@astrojs/tailwind": "5.1.0",
     "@iconify-json/ic": "1.1.17",
-    "@iconify-json/simple-icons": "1.1.100",
+    "@iconify-json/simple-icons": "1.1.101",
     "@tailwindcss/typography": "0.5.13",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
