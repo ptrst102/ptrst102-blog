@@ -42,7 +42,7 @@
     "typescript": "5.4.5"
   },
   "devDependencies": {
-    "@playform/compress": "0.0.3",
+    "@playform/compress": "0.0.4",
     "@typescript-eslint/eslint-plugin": "7.8.0",
     "@typescript-eslint/parser": "7.8.0",
     "eslint": "9.2.0",
