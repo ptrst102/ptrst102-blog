@@ -19,7 +19,7 @@ importers:
         version: 3.1.5
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.10.0(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5))(tailwindcss@3.4.4)
+        version: 5.1.0(astro@4.10.1(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5))(tailwindcss@3.4.4)
       '@iconify-json/ic':
         specifier: 1.1.17
         version: 1.1.17
@@ -36,8 +36,8 @@ importers:
         specifier: 18.3.0
         version: 18.3.0
       astro:
-        specifier: 4.10.0
-        version: 4.10.0(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)
+        specifier: 4.10.1
+        version: 4.10.1(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)
       astro-icon:
         specifier: 1.1.0
         version: 1.1.0
@@ -324,10 +324,6 @@ packages:
 
   '@babel/helper-plugin-utils@7.22.5':
     resolution: {integrity: sha512-uLls06UVKgFG9QD4OeFYLEGteMIAa5kpTPcFL28yuCIIzsf6ZyKZMllKVOCZFhiZ5ptnwX4mtKdWCBE/uT4amg==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/helper-plugin-utils@7.24.6':
-    resolution: {integrity: sha512-MZG/JcWfxybKwsA9N9PmtF2lOSFSEMVCpIRrbxccZFLJPrJciJdG/UhSh5W96GEteJI2ARqm5UAHxISwRDLSNg==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-plugin-utils@7.24.7':
@@ -1632,8 +1628,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@4.10.0:
-    resolution: {integrity: sha512-UNVGGZIwdEPIUumcwgIQnd90b4/PslReY9q3xy/Q6bIq/kvK0duIWCbhFPwf06xu+1tExziP9Jl+klvLXM0LfA==}
+  astro@4.10.1:
+    resolution: {integrity: sha512-7bbnUX1CW+12suz0Do8ef1CihqVjDyUW/H/0piNHZyBE3W/VFt5GP5ZxlPzzJLoGtaXif0aXJ4iPurEem2LpdA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4766,9 +4762,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.10.0(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5))(tailwindcss@3.4.4)':
+  '@astrojs/tailwind@5.1.0(astro@4.10.1(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5))(tailwindcss@3.4.4)':
     dependencies:
-      astro: 4.10.0(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)
+      astro: 4.10.1(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)
       autoprefixer: 10.4.17(postcss@8.4.33)
       postcss: 8.4.33
       postcss-load-config: 4.0.2(postcss@8.4.33)
@@ -4940,8 +4936,6 @@ snapshots:
 
   '@babel/helper-plugin-utils@7.22.5': {}
 
-  '@babel/helper-plugin-utils@7.24.6': {}
-
   '@babel/helper-plugin-utils@7.24.7': {}
 
   '@babel/helper-simple-access@7.24.5':
@@ -5012,12 +5006,12 @@ snapshots:
   '@babel/plugin-syntax-jsx@7.23.3(@babel/core@7.24.5)':
     dependencies:
       '@babel/core': 7.24.5
-      '@babel/helper-plugin-utils': 7.24.6
+      '@babel/helper-plugin-utils': 7.24.7
 
   '@babel/plugin-syntax-jsx@7.24.6(@babel/core@7.24.6)':
     dependencies:
       '@babel/core': 7.24.6
-      '@babel/helper-plugin-utils': 7.24.6
+      '@babel/helper-plugin-utils': 7.24.7
 
   '@babel/plugin-transform-react-jsx-self@7.24.7(@babel/core@7.24.6)':
     dependencies:
@@ -5043,7 +5037,7 @@ snapshots:
       '@babel/core': 7.24.6
       '@babel/helper-annotate-as-pure': 7.24.6
       '@babel/helper-module-imports': 7.24.6
-      '@babel/helper-plugin-utils': 7.24.6
+      '@babel/helper-plugin-utils': 7.24.7
       '@babel/plugin-syntax-jsx': 7.24.6(@babel/core@7.24.6)
       '@babel/types': 7.24.6
 
@@ -6249,7 +6243,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@4.10.0(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5):
+  astro@4.10.1(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.8.0
       '@astrojs/internal-helpers': 0.4.0
