@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "open-graph-scraper": "6.5.2",
+    "open-graph-scraper": "6.6.1",
     "unist-builder": "4.0.0",
     "unist-util-visit": "5.0.0"
   },
