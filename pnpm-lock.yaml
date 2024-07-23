@@ -130,8 +130,8 @@ importers:
   tools/remark-ogp-card:
     dependencies:
       open-graph-scraper:
-        specifier: 6.6.3
-        version: 6.6.3
+        specifier: 6.7.0
+        version: 6.7.0
       unist-builder:
         specifier: 4.0.0
         version: 4.0.0
@@ -2901,8 +2901,8 @@ packages:
     resolution: {integrity: sha512-1FlR+gjXK7X+AsAHso35MnyN5KqGwJRi/31ft6x0M194ht7S+rWAvd7PHss9xSKMzE0asv1pyIHaJYq+BbacAQ==}
     engines: {node: '>=12'}
 
-  open-graph-scraper@6.6.3:
-    resolution: {integrity: sha512-JNZhP7p9EUkVdzXNSE6Z4gc9khCfIfpdRn0CD8hfpsYwPzH7UnE2eU+2UbAezjDcbfsM6HO1ufIBGixbk5AgUw==}
+  open-graph-scraper@6.7.0:
+    resolution: {integrity: sha512-LZAvVNhQ4J52W363ccK8/PkLMQYlrplLx+apBpipdclcdBIr2RS421tKk6SCJMxxoVPFngGwuAKJMvKb97Z7Cg==}
     engines: {node: '>=18.0.0'}
 
   optionator@0.9.3:
@@ -3888,8 +3888,8 @@ packages:
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
-  undici@6.19.2:
-    resolution: {integrity: sha512-JfjKqIauur3Q6biAtHJ564e3bWa8VvT+7cSiOJHFbX4Erv6CLGDpg8z+Fmg/1OI/47RA+GI2QZaF48SSaLvyBA==}
+  undici@6.19.4:
+    resolution: {integrity: sha512-i3uaEUwNdkRq2qtTRRJb13moW5HWqviu7Vl7oYRYz++uPtGHJj+x7TGjcEuwS5Mt2P4nA0U9dhIX3DdB6JGY0g==}
     engines: {node: '>=18.17'}
 
   unicode-trie@2.0.0:
@@ -3976,10 +3976,6 @@ packages:
 
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
-
-  validator@13.12.0:
-    resolution: {integrity: sha512-c1Q0mCiPlgdTVVVIJIrBuxNicYE+t/7oKeI9MWLj3fh/uq2Pxh/3eeWbVZ4OcGW1TUf53At0njHw5SMdA3tmMg==}
-    engines: {node: '>= 0.10'}
 
   vfile-location@5.0.2:
     resolution: {integrity: sha512-NXPYyxyBSH7zB5U6+3uDdd6Nybz6o6/od9rk8bp9H8GR3L+cm/fC0uUTbqBmUTnMCUDslAGBOIKNfvvb+gGlDg==}
@@ -7563,13 +7559,12 @@ snapshots:
     dependencies:
       mimic-fn: 4.0.0
 
-  open-graph-scraper@6.6.3:
+  open-graph-scraper@6.7.0:
     dependencies:
       chardet: 2.0.0
       cheerio: 1.0.0-rc.12
       iconv-lite: 0.6.3
-      undici: 6.19.2
-      validator: 13.12.0
+      undici: 6.19.4
 
   optionator@0.9.3:
     dependencies:
@@ -8788,7 +8783,7 @@ snapshots:
 
   undici-types@5.26.5: {}
 
-  undici@6.19.2: {}
+  undici@6.19.4: {}
 
   unicode-trie@2.0.0:
     dependencies:
@@ -8923,8 +8918,6 @@ snapshots:
     dependencies:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
-
-  validator@13.12.0: {}
 
   vfile-location@5.0.2:
     dependencies:
