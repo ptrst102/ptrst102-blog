@@ -130,8 +130,8 @@ importers:
   tools/remark-ogp-card:
     dependencies:
       open-graph-scraper:
-        specifier: 6.8.1
-        version: 6.8.1
+        specifier: 6.8.2
+        version: 6.8.2
       unist-builder:
         specifier: 4.0.0
         version: 4.0.0
@@ -3082,8 +3082,8 @@ packages:
   oniguruma-to-js@0.4.3:
     resolution: {integrity: sha512-X0jWUcAlxORhOqqBREgPMgnshB7ZGYszBNspP+tS9hPD3l13CdaXcHbgImoHUHlrvGx/7AvFEkTRhAGYh+jzjQ==}
 
-  open-graph-scraper@6.8.1:
-    resolution: {integrity: sha512-uy9tHm80ir9AnEQclmnlpxU80SBQkwZfWFq0lzRxpNAY1Grcyn7tuOu354XhnfA7C3wNuZ0/j94LNQY5XP7ZRg==}
+  open-graph-scraper@6.8.2:
+    resolution: {integrity: sha512-Ht3k+bhEfLCojwka13xN+9B6LANJBcANI9TZ28KNBMBlK/dp/ooEblDyzj25RQVzXWUAK4UDlQQHU4hFmCnClg==}
     engines: {node: '>=18.0.0'}
 
   optionator@0.9.3:
@@ -8032,7 +8032,7 @@ snapshots:
     dependencies:
       regex: 4.3.2
 
-  open-graph-scraper@6.8.1:
+  open-graph-scraper@6.8.2:
     dependencies:
       chardet: 2.0.0
       cheerio: 1.0.0
