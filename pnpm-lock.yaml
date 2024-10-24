@@ -76,8 +76,8 @@ importers:
         version: 5.6.3
     devDependencies:
       '@playform/compress':
-        specifier: 0.1.5
-        version: 0.1.5(@types/node@22.5.0)(rollup@4.21.0)(typescript@5.6.3)
+        specifier: 0.1.6
+        version: 0.1.6(@types/node@22.5.0)(rollup@4.21.0)(typescript@5.6.3)
       '@typescript-eslint/eslint-plugin':
         specifier: 8.11.0
         version: 8.11.0(@typescript-eslint/parser@8.11.0(eslint@9.13.0(jiti@1.21.0))(typescript@5.6.3))(eslint@9.13.0(jiti@1.21.0))(typescript@5.6.3)
@@ -750,8 +750,8 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playform/compress@0.1.5':
-    resolution: {integrity: sha512-LzyF/SHU4ZKNM4d6JmlEOoakkWdF9wJklh7vNgJLfHCbh6DMADMcrMDpWnv+X9yHjCduEb7dvd0DsSVblTEtow==}
+  '@playform/compress@0.1.6':
+    resolution: {integrity: sha512-T76ABM/naxhIEYQ9D4z+6MS9OW6IGxChlUd8gBPGa5ipTxsQTRV3QkB5v2/l7ZOnds/JoaXqzr0J6xThKXjm7Q==}
 
   '@playform/pipe@0.1.1':
     resolution: {integrity: sha512-qofwa/+UKbvyHw4NiVwQZ5Z4UNEDSKmrtKFUL6JO9NhtaEuio3a90QuvTTsTw4g4tGHCmj0is/7p1igkRJ2EyA==}
@@ -5030,7 +5030,7 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@playform/compress@0.1.5(@types/node@22.5.0)(rollup@4.21.0)(typescript@5.6.3)':
+  '@playform/compress@0.1.6(@types/node@22.5.0)(rollup@4.21.0)(typescript@5.6.3)':
     dependencies:
       '@playform/pipe': 0.1.1
       '@types/csso': 5.0.4
