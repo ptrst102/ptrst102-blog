@@ -52,7 +52,7 @@
     "npm-run-all2": "6.2.6",
     "prettier": "3.3.3",
     "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-astro-organize-imports": "0.4.10",
+    "prettier-plugin-astro-organize-imports": "0.4.11",
     "prettier-plugin-organize-imports": "4.1.0",
     "prettier-plugin-tailwindcss": "0.6.8",
     "textlint": "14.3.0",
