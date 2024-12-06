@@ -13,7 +13,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)
       '@astrojs/react':
         specifier: 3.6.3
-        version: 3.6.3(@types/node@22.5.0)(@types/react-dom@18.3.1)(@types/react@18.3.13)(lightningcss@1.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(terser@5.36.0)
+        version: 3.6.3(@types/node@22.5.0)(@types/react-dom@18.3.2)(@types/react@18.3.14)(lightningcss@1.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(terser@5.36.0)
       '@astrojs/sitemap':
         specifier: 3.2.1
         version: 3.2.1
@@ -30,11 +30,11 @@ importers:
         specifier: 0.5.15
         version: 0.5.15(tailwindcss@3.4.16)
       '@types/react':
-        specifier: 18.3.13
-        version: 18.3.13
+        specifier: 18.3.14
+        version: 18.3.14
       '@types/react-dom':
-        specifier: 18.3.1
-        version: 18.3.1
+        specifier: 18.3.2
+        version: 18.3.2
       astro:
         specifier: 4.16.17
         version: 4.16.17(@types/node@22.5.0)(lightningcss@1.27.0)(rollup@4.21.0)(terser@5.36.0)(typescript@5.7.2)
@@ -1023,11 +1023,11 @@ packages:
   '@types/prop-types@15.7.11':
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
 
-  '@types/react-dom@18.3.1':
-    resolution: {integrity: sha512-qW1Mfv8taImTthu4KoXgDfLuk4bydU6Q/TkADnDWWHwi4NX4BR+LWfTp2sVmTqRrsHvyDDTelgelxJ+SsejKKQ==}
+  '@types/react-dom@18.3.2':
+    resolution: {integrity: sha512-Fqp+rcvem9wEnGr3RY8dYNvSQ8PoLqjZ9HLgaPUOjJJD120uDyOxOjc/39M4Kddp9JQCxpGQbnhVQF0C0ncYVg==}
 
-  '@types/react@18.3.13':
-    resolution: {integrity: sha512-ii/gswMmOievxAJed4PAHT949bpYjPKXvXo1v6cRB/kqc2ZR4n+SgyCyvyc5Fec5ez8VnUumI1Vk7j6fRyRogg==}
+  '@types/react@18.3.14':
+    resolution: {integrity: sha512-NzahNKvjNhVjuPBQ+2G7WlxstQ+47kXZNHlUvFakDViuIEfGY926GqhMueQFZ7woG+sPiQKlF36XfrIUVSUfFg==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -4503,10 +4503,10 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/react@3.6.3(@types/node@22.5.0)(@types/react-dom@18.3.1)(@types/react@18.3.13)(lightningcss@1.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(terser@5.36.0)':
+  '@astrojs/react@3.6.3(@types/node@22.5.0)(@types/react-dom@18.3.2)(@types/react@18.3.14)(lightningcss@1.27.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(terser@5.36.0)':
     dependencies:
-      '@types/react': 18.3.13
-      '@types/react-dom': 18.3.1
+      '@types/react': 18.3.14
+      '@types/react-dom': 18.3.2
       '@vitejs/plugin-react': 4.3.3(vite@5.4.10(@types/node@22.5.0)(lightningcss@1.27.0)(terser@5.36.0))
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -5437,11 +5437,11 @@ snapshots:
 
   '@types/prop-types@15.7.11': {}
 
-  '@types/react-dom@18.3.1':
+  '@types/react-dom@18.3.2':
     dependencies:
-      '@types/react': 18.3.13
+      '@types/react': 18.3.14
 
-  '@types/react@18.3.13':
+  '@types/react@18.3.14':
     dependencies:
       '@types/prop-types': 15.7.11
       csstype: 3.1.3
