@@ -124,8 +124,8 @@ importers:
         specifier: 2.4.3
         version: 2.4.3
       textlint-rule-preset-ja-technical-writing:
-        specifier: 10.0.2
-        version: 10.0.2
+        specifier: 12.0.2
+        version: 12.0.2
 
   tools/remark-ogp-card:
     dependencies:
@@ -3876,8 +3876,8 @@ packages:
   textlint-rule-preset-ja-spacing@2.4.3:
     resolution: {integrity: sha512-WAiWY9TOE8/bRdl14XJdjkPQcV0hLS4O+PCUYU1yxXmJhZ8V3ciw2GYqpA9GL73qAxL25UD6mkf1yfz6aJ4qSA==}
 
-  textlint-rule-preset-ja-technical-writing@10.0.2:
-    resolution: {integrity: sha512-FjhJiwdcww8MqtuwSitvDshqVw47Yd6AnYj/mcosBjGY26InbAt7ay4EURt2LHF3cBpuWOFesvaVZKisWc1ZIA==}
+  textlint-rule-preset-ja-technical-writing@12.0.2:
+    resolution: {integrity: sha512-BBVY6oA5V799k5wRfP+gCpDHsp6vWjWX2UT+/KLlAFFsNdmRB8Z6qyOnqiOjfzmLGIRgoMcPI1dXj5upOqnD6Q==}
 
   textlint-rule-preset-jtf-style@3.0.1:
     resolution: {integrity: sha512-61lRomNUWeOmL2dt+sTdqPUx2FRxXK+8sgVGC6OJrifj3taJZx1QoJucIeVrcPRNRxD1sqXFXM0s+o5W3Nb8lg==}
@@ -6354,20 +6354,20 @@ snapshots:
 
   define-data-property@1.1.1:
     dependencies:
-      get-intrinsic: 1.2.2
+      get-intrinsic: 1.2.6
       gopd: 1.0.1
-      has-property-descriptors: 1.0.1
+      has-property-descriptors: 1.0.2
 
   define-data-property@1.1.4:
     dependencies:
       es-define-property: 1.0.1
       es-errors: 1.3.0
-      gopd: 1.0.1
+      gopd: 1.2.0
 
   define-properties@1.2.1:
     dependencies:
-      define-data-property: 1.1.1
-      has-property-descriptors: 1.0.1
+      define-data-property: 1.1.4
+      has-property-descriptors: 1.0.2
       object-keys: 1.1.1
 
   define-property@2.0.2:
@@ -6876,7 +6876,7 @@ snapshots:
 
   has-property-descriptors@1.0.1:
     dependencies:
-      get-intrinsic: 1.2.2
+      get-intrinsic: 1.2.6
 
   has-property-descriptors@1.0.2:
     dependencies:
@@ -7066,7 +7066,7 @@ snapshots:
 
   is-accessor-descriptor@1.0.1:
     dependencies:
-      hasown: 2.0.0
+      hasown: 2.0.2
 
   is-alphabetical@1.0.4: {}
 
@@ -7093,7 +7093,7 @@ snapshots:
 
   is-data-descriptor@1.0.1:
     dependencies:
-      hasown: 2.0.0
+      hasown: 2.0.2
 
   is-decimal@1.0.4: {}
 
@@ -8592,11 +8592,11 @@ snapshots:
 
   set-function-length@1.2.0:
     dependencies:
-      define-data-property: 1.1.1
+      define-data-property: 1.1.4
       function-bind: 1.1.2
-      get-intrinsic: 1.2.2
+      get-intrinsic: 1.2.6
       gopd: 1.0.1
-      has-property-descriptors: 1.0.1
+      has-property-descriptors: 1.0.2
 
   set-function-length@1.2.2:
     dependencies:
@@ -8604,7 +8604,7 @@ snapshots:
       es-errors: 1.3.0
       function-bind: 1.1.2
       get-intrinsic: 1.2.6
-      gopd: 1.0.1
+      gopd: 1.2.0
       has-property-descriptors: 1.0.2
 
   set-function-name@2.0.1:
@@ -9038,7 +9038,7 @@ snapshots:
       textlint-rule-ja-space-around-link: 2.4.2
       textlint-rule-ja-space-between-half-and-full-width: 2.4.2
 
-  textlint-rule-preset-ja-technical-writing@10.0.2:
+  textlint-rule-preset-ja-technical-writing@12.0.2:
     dependencies:
       '@textlint-rule/textlint-rule-no-invalid-control-character': 3.0.0
       '@textlint-rule/textlint-rule-no-unmatched-pair': 2.0.4
