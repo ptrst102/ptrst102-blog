@@ -55,7 +55,7 @@
     "prettier-plugin-astro-organize-imports": "0.4.11",
     "prettier-plugin-organize-imports": "4.1.0",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "textlint": "14.4.2",
+    "textlint": "14.5.0",
     "textlint-filter-rule-comments": "1.2.2",
     "textlint-rule-preset-ja-spacing": "2.4.3",
     "textlint-rule-preset-ja-technical-writing": "10.0.2"
