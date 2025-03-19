@@ -13,7 +13,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.2)
       '@astrojs/react':
         specifier: 3.6.3
-        version: 3.6.3(@types/node@22.10.5)(@types/react-dom@19.0.4(@types/react@19.0.11))(@types/react@19.0.11)(lightningcss@1.28.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(terser@5.37.0)
+        version: 3.6.3(@types/node@22.10.5)(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(lightningcss@1.28.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(terser@5.37.0)
       '@astrojs/sitemap':
         specifier: 3.3.0
         version: 3.3.0
@@ -30,11 +30,11 @@ importers:
         specifier: 0.5.16
         version: 0.5.16(tailwindcss@3.4.17)
       '@types/react':
-        specifier: 19.0.11
-        version: 19.0.11
+        specifier: 19.0.12
+        version: 19.0.12
       '@types/react-dom':
         specifier: 19.0.4
-        version: 19.0.4(@types/react@19.0.11)
+        version: 19.0.4(@types/react@19.0.12)
       astro:
         specifier: 4.16.18
         version: 4.16.18(@types/node@22.10.5)(lightningcss@1.28.2)(rollup@4.21.0)(terser@5.37.0)(typescript@5.8.2)
@@ -1027,8 +1027,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.0.0
 
-  '@types/react@19.0.11':
-    resolution: {integrity: sha512-vrdxRZfo9ALXth6yPfV16PYTLZwsUWhVjjC+DkfE5t1suNSbBrWC9YqSuuxJZ8Ps6z1o2ycRpIqzZJIgklq4Tw==}
+  '@types/react@19.0.12':
+    resolution: {integrity: sha512-V6Ar115dBDrjbtXSrS+/Oruobc+qVbbUxDFC1RSbRqLt5SYvxxyIDrSC85RWml54g+jfNeEMZhEj7wW07ONQhA==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -4546,10 +4546,10 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/react@3.6.3(@types/node@22.10.5)(@types/react-dom@19.0.4(@types/react@19.0.11))(@types/react@19.0.11)(lightningcss@1.28.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(terser@5.37.0)':
+  '@astrojs/react@3.6.3(@types/node@22.10.5)(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(lightningcss@1.28.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(terser@5.37.0)':
     dependencies:
-      '@types/react': 19.0.11
-      '@types/react-dom': 19.0.4(@types/react@19.0.11)
+      '@types/react': 19.0.12
+      '@types/react-dom': 19.0.4(@types/react@19.0.12)
       '@vitejs/plugin-react': 4.3.3(vite@5.4.10(@types/node@22.10.5)(lightningcss@1.28.2)(terser@5.37.0))
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
@@ -5481,11 +5481,11 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
-  '@types/react-dom@19.0.4(@types/react@19.0.11)':
+  '@types/react-dom@19.0.4(@types/react@19.0.12)':
     dependencies:
-      '@types/react': 19.0.11
+      '@types/react': 19.0.12
 
-  '@types/react@19.0.11':
+  '@types/react@19.0.12':
     dependencies:
       csstype: 3.1.3
 
