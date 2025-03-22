@@ -1,0 +1,27 @@
+rules:
+  preset-ja-spacing:
+    ja-no-space-between-full-width: false
+    ja-space-between-half-and-full-width:
+      space: "never"
+
+  general-novel-style-ja:
+    chars_leading_paragraph: false
+    no_punctuation_before_quote: true
+    space_after_marks: false
+    even_number_ellipsises: true
+    even_number_dashes: true
+    appropriate_use_of_punctuation: true
+    appropriate_use_of_interpunct: true
+    appropriate_use_of_choonpu: true
+    appropriate_use_of_minus_sign: false
+    max_arabic_numeral_digits: false
+
+  ja-hiraku:
+    daimeishi: true
+    fukujoshi: true
+    fukushi: true
+    hojodoushi: true
+    hojokeiyoushi: true
+    keishikimeishi: true
+    rentaishi: true
+    setsuzokushi: true
