@@ -24,7 +24,7 @@
     "@iconify-json/ic": "1.2.2",
     "@iconify-json/simple-icons": "1.2.29",
     "@tailwindcss/typography": "0.5.16",
-    "@tailwindcss/vite": "^4.0.15",
+    "@tailwindcss/vite": "4.0.15",
     "astro": "5.5.4",
     "astro-icon": "1.1.5",
     "astro-seo": "0.8.4",
@@ -40,7 +40,7 @@
     "typescript": "5.8.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "1.9.4",
     "@playform/compress": "0.1.7",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
