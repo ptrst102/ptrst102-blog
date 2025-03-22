@@ -1,4 +1,27 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@config "./tailwind.config.mjs";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "retro";
+  default: true; /* set as default */
+  prefersdark: true; /* set as default dark mode (prefers-color-scheme:dark) */
+  color-scheme: light; /* color of browser-provided UI */
+
+  --color-base-100: #fffbec;
+  --color-base-200: #e4d8b4;
+  --color-base-300: #dbca9b;
+  --color-base-content: #222222;
+  --color-primary: #059669;
+  --color-primary-content: #89feca;
+  --color-secondary: #f472b6;
+  --color-secondary-content: #2f000a;
+  --color-accent: #f9a8d4;
+  --color-accent-content: #5a1440;
+  --color-neutral: #dcfce7;
+  --color-neutral-content: #3d5848;
+  --animation-btn: 0;
+}
 
 /* noto-sans-jp-regular - japanese_latin */
 @font-face {
@@ -43,7 +66,7 @@
 }
 
 .prose .remark-card a {
-  @apply block rounded-box border bg-base-100 p-6 hover:bg-base-200 hover:bg-opacity-50;
+  @apply block rounded-box border bg-base-100 p-6 hover:bg-base-200/2;
 }
 
 .prose .remark-card .title {

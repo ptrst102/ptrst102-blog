@@ -1,6 +1,3 @@
-import typography from "@tailwindcss/typography";
-import daisyui from "daisyui";
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -20,6 +17,7 @@ export default {
 
             h2: {
               borderBottomWidth: "1px",
+              borderColor: "#e5e7eb",
             },
 
             "blockquote p:first-of-type::before": { content: "none" },
@@ -28,21 +26,5 @@ export default {
         },
       },
     },
-  },
-  plugins: [typography, daisyui],
-  daisyui: {
-    themes: [
-      {
-        mytheme: {
-          primary: "#059669",
-          secondary: "#f472b6",
-          accent: "#f9a8d4",
-          neutral: "#dcfce7",
-          "base-100": "#fffbec",
-          "--animation-btn": 0,
-        },
-      },
-    ],
-    logs: false,
   },
 };

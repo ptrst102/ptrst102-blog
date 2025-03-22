@@ -1,6 +1,6 @@
 ---
 import "@/styles/global.css";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import { SEO } from "astro-seo";
 
 interface Props {
@@ -59,7 +59,7 @@ const {
         ],
       }}
     />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="flex min-h-svh flex-col">
     <slot />
