@@ -9,6 +9,6 @@ export const getDescription = (post: CollectionEntry<"blog">) => {
 
   const MAX_LENGTH = 100;
   return body.length > MAX_LENGTH
-    ? body.substring(0, MAX_LENGTH - 1) + "…"
+    ? `${body.substring(0, MAX_LENGTH - 1)}…`
     : body;
 };

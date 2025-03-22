@@ -1,6 +1,7 @@
 ---
 title: 手帳はつけたほうがよい
 publishDate: 2024-07-28
+updateDate: 2025-03-22
 tags: ["日記"]
 ---
 

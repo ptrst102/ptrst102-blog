@@ -8,7 +8,7 @@ export const getOgImage = async (text: string) => {
 
   const MAX_LENGTH = 40;
   const truncatedText =
-    text.length > MAX_LENGTH ? text.substring(0, MAX_LENGTH - 1) + "…" : text;
+    text.length > MAX_LENGTH ? `${text.substring(0, MAX_LENGTH - 1)}…` : text;
 
   const svg = await satori(
     <main
@@ -97,7 +97,7 @@ export const getOgImage = async (text: string) => {
 };
 
 const fetchFont = async (): Promise<ArrayBuffer> => {
-  const API = `https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700`;
+  const API = "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700";
 
   const css = await (
     await fetch(API, {
