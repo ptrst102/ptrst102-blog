@@ -1,8 +1,8 @@
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import compress from "@playform/compress";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
-import compress from "@playform/compress";
 import ogpCardPlugin from "./tools/remark-ogp-card";
 
 import react from "@astrojs/react";

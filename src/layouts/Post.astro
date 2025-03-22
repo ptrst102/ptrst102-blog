@@ -1,4 +1,5 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import Tag from "@/components/Tag.astro";
@@ -6,7 +7,6 @@ import { SITE_TITLE } from "@/config";
 import Drawer from "@/layouts/Drawer.astro";
 import { cdate } from "@/lib/cdate";
 import { getDescription } from "@/utils/getDescription";
-import type { CollectionEntry } from "astro:content";
 import Layout from "./Layout.astro";
 
 export interface Props {

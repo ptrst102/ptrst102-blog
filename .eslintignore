@@ -1,4 +1,0 @@
-.astro/
-node_modules/**
-**/*.d.ts
-dist/

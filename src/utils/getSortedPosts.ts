@@ -1,5 +1,5 @@
-import { cdate } from "@/lib/cdate";
 import type { CollectionEntry } from "astro:content";
+import { cdate } from "@/lib/cdate";
 
 export const getSortedPosts = (posts: CollectionEntry<"blog">[]) =>
   posts.sort(

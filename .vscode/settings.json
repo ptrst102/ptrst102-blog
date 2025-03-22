@@ -1,62 +1,12 @@
 {
+  "editor.defaultFormatter": "biomejs.biome",
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.documentSelectors": ["**/*.astro"],
-  "textlint.autoFixOnSave": true,
-  "files.associations": {
-    "*.css": "tailwindcss"
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit"
   },
-  "[markdown]": {
-    "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 80,
-    "editor.rulers": [80],
-    "editor.wrappingStrategy": "simple",
-    "editor.wordBreak": "normal",
-    "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?゠・，、；：！？．。‘’“”（）｟｠［］〚〛〔〕｛｝〈〉《》「」『』【】〖〗〝〟がてでとにのはへもやを",
-    "editor.unicodeHighlight.invisibleCharacters": true,
-    "editor.unicodeHighlight.ambiguousCharacters": true,
-    "editor.unicodeHighlight.allowedCharacters": {
-      "゠": true,
-      "，": true,
-      "；": true,
-      "：": true,
-      "！": true,
-      "？": true,
-      "．": true,
-      "‘": true,
-      "’": true,
-      "（": true,
-      "）": true,
-      "［": true,
-      "］": true,
-      "｛": true,
-      "｝": true,
-      "〔": true,
-      "〕": true,
-      "＜": true,
-      "＞": true,
-      "ノ": true
-    },
-    "editor.bracketPairColorization.enabled": true,
-    "editor.language.colorizedBracketPairs": [
-      ["‘", "’"],
-      ["“", "”"],
-      ["(", ")"],
-      ["（", "）"],
-      ["｟", "｠"],
-      ["[", "]"],
-      ["［", "］"],
-      ["〚", "〛"],
-      ["〔", "〕"],
-      ["{", "}"],
-      ["｛", "｝"],
-      ["〈", "〉"],
-      ["《", "》"],
-      ["「", "」"],
-      ["『", "』"],
-      ["【", "】"],
-      ["〖", "〗"],
-      ["〝", "〟"]
-    ]
-  }
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "prettier.documentSelectors": ["**/*.astro"],
+  "textlint.autoFixOnSave": true
 }
