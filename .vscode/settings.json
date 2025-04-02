@@ -8,5 +8,8 @@
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
   "prettier.documentSelectors": ["**/*.astro"],
-  "textlint.autoFixOnSave": true
+  "textlint.autoFixOnSave": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
