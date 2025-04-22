@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "open-graph-scraper": "6.9.0",
+    "open-graph-scraper": "6.10.0",
     "unist-builder": "4.0.0",
     "unist-util-visit": "5.0.0"
   },
