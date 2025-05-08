@@ -30,8 +30,8 @@ importers:
         specifier: 4.1.5
         version: 4.1.5(vite@6.3.4(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.5.0))
       astro:
-        specifier: 5.7.11
-        version: 5.7.11(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.36.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.0)
+        specifier: 5.7.12
+        version: 5.7.12(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.36.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.0)
       astro-icon:
         specifier: 1.1.5
         version: 1.1.5
@@ -1122,6 +1122,9 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
+  '@types/fontkit@2.0.8':
+    resolution: {integrity: sha512-wN+8bYxIpJf+5oZdrdtaX04qUuWHcKxcDEgRS9Qm9ZClSHjzEn13SxUC+5eRM+4yXIeTYk8mTzLAWGF64847ew==}
+
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
 
@@ -1281,8 +1284,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@5.7.11:
-    resolution: {integrity: sha512-9qRVwp8pue3isddLBnTexJsmKFpmms9Fo7Ss+3yrC0aINvbHKpD7q6qf52BtfQEk2xJgyx3SQy3dUsuD90sEqQ==}
+  astro@5.7.12:
+    resolution: {integrity: sha512-UQOItiZz2hcv9PlHTQ6dNqFDIVNPnmwk6eyAjJqPE9O8EDHZK2JKtTRD0CBFN2Uqr0RE0TWP2gqDpLfsa5dJEA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1854,6 +1857,9 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
+
+  fontace@0.3.0:
+    resolution: {integrity: sha512-czoqATrcnxgWb/nAkfyIrRp6Q8biYj7nGnL6zfhTcX+JKKpWHFBnb8uNMw/kZr7u++3Y3wYSYoZgHkCcsuBpBg==}
 
   fontkit@2.0.4:
     resolution: {integrity: sha512-syetQadaUEDNdxdugga9CpEYVaQIxOwk7GlwZWWZ19//qW4zE5bknOKeMBDYAASwnpaSHKJITRLMF9m1fp3s6g==}
@@ -4613,7 +4619,7 @@ snapshots:
       '@playform/pipe': 0.1.3
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 5.7.11(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.36.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.0)
+      astro: 5.7.12(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.36.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.0)
       commander: 13.1.0
       csso: 5.0.5
       deepmerge-ts: 7.1.5
@@ -5007,6 +5013,10 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
+  '@types/fontkit@2.0.8':
+    dependencies:
+      '@types/node': 22.13.14
+
   '@types/hast@3.0.4':
     dependencies:
       '@types/unist': 3.0.2
@@ -5221,7 +5231,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@5.7.11(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.36.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.0):
+  astro@5.7.12(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.36.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.0):
     dependencies:
       '@astrojs/compiler': 2.11.0
       '@astrojs/internal-helpers': 0.6.1
@@ -5249,6 +5259,7 @@ snapshots:
       esbuild: 0.25.1
       estree-walker: 3.0.3
       flattie: 1.1.1
+      fontace: 0.3.0
       github-slugger: 2.0.0
       html-escaper: 3.0.3
       http-cache-semantics: 4.1.1
@@ -5890,6 +5901,11 @@ snapshots:
   flattie@1.1.1: {}
 
   follow-redirects@1.15.6: {}
+
+  fontace@0.3.0:
+    dependencies:
+      '@types/fontkit': 2.0.8
+      fontkit: 2.0.4
 
   fontkit@2.0.4:
     dependencies:
