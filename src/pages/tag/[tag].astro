@@ -39,7 +39,7 @@ const { tag, posts } = Astro.props;
 <Layout title={`タグ: ${tag} | ${SITE_TITLE}`}>
   <Drawer>
     <Header />
-    <Main title={`タグ: ${tag}`} description=`タグ: ${tag}の記事一覧です。`>
+    <Main title={`タグ: ${tag}`} description={`タグ: ${tag}の記事一覧です。`}>
       {
         posts.map((post) => {
           return <PostCard post={post} />;
