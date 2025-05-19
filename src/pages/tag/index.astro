@@ -13,7 +13,7 @@ const posts = await getPosts();
 const tags = getUniqueTags(posts);
 ---
 
-<Layout title=`タグ一覧 | ${SITE_TITLE}`>
+<Layout title={`タグ一覧 | ${SITE_TITLE}`}>
   <Drawer>
     <Header />
     <Main title="タグ一覧" description="当ブログで使用されているタグ一覧です。">
