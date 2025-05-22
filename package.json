@@ -54,7 +54,7 @@
     "textlint-rule-prh": "6.1.0"
   },
   "volta": {
-    "node": "22.15.1"
+    "node": "22.16.0"
   },
   "packageManager": "pnpm@10.11.0"
 }
