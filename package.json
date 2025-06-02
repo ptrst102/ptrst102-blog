@@ -33,7 +33,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "remark-breaks": "4.0.0",
-    "satori": "0.13.1",
+    "satori": "0.13.2",
     "sharp": "0.34.2",
     "tailwind-merge": "3.3.0",
     "tailwindcss": "4.1.8",
