@@ -1,7 +1,9 @@
 packages:
   - packages/*
   - tools/*
+
 onlyBuiltDependencies:
-  - "@biomejs/biome"
+  - '@biomejs/biome'
+  - '@tailwindcss/oxide'
   - esbuild
   - sharp
