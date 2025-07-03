@@ -30,8 +30,8 @@ importers:
         specifier: 4.1.11
         version: 4.1.11(vite@6.3.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.42.0)(yaml@2.5.0))
       astro:
-        specifier: 5.10.2
-        version: 5.10.2(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.36.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.5.0)
+        specifier: 5.11.0
+        version: 5.11.0(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.36.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.5.0)
       astro-icon:
         specifier: 1.1.5
         version: 1.1.5
@@ -1298,8 +1298,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@5.10.2:
-    resolution: {integrity: sha512-CCBU+e/Apk6NWEMnc/R9dVZD/+FaCnNqWJicX1Oe6T18vLKop+LPs/m/88ekJk4zxP1g1N/GfUq4wEedUSk1Wg==}
+  astro@5.11.0:
+    resolution: {integrity: sha512-MEICntERthUxJPSSDsDiZuwiCMrsaYy3fnDhp4c6ScUfldCB8RBnB/myYdpTFXpwYBy6SgVsHQ1H4MuuA7ro/Q==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4841,7 +4841,7 @@ snapshots:
       '@playform/pipe': 0.1.3
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 5.10.2(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.36.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.5.0)
+      astro: 5.11.0(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.36.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.5.0)
       commander: 14.0.0
       csso: 5.0.5
       deepmerge-ts: 7.1.5
@@ -5474,7 +5474,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@5.10.2(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.36.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.5.0):
+  astro@5.11.0(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.36.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.5.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
