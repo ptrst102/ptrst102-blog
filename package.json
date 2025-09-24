@@ -23,7 +23,7 @@
     "@astrojs/sitemap": "3.6.0",
     "@iconify-json/ic": "1.2.4",
     "@iconify-json/simple-icons": "1.2.53",
-    "@tailwindcss/typography": "0.5.18",
+    "@tailwindcss/typography": "0.5.19",
     "@tailwindcss/vite": "4.1.13",
     "astro": "5.13.10",
     "astro-icon": "1.1.5",
