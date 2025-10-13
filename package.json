@@ -40,7 +40,7 @@
     "typescript": "5.8.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.2.6",
     "@playform/compress": "0.2.0",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.1",
