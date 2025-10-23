@@ -24,7 +24,7 @@
     "@iconify-json/ic": "1.2.4",
     "@iconify-json/simple-icons": "1.2.55",
     "@tailwindcss/typography": "0.5.19",
-    "@tailwindcss/vite": "4.1.15",
+    "@tailwindcss/vite": "4.1.16",
     "astro": "5.14.8",
     "astro-icon": "1.1.5",
     "astro-seo": "0.8.4",
@@ -36,7 +36,7 @@
     "satori": "0.18.3",
     "sharp": "0.34.4",
     "tailwind-merge": "3.3.1",
-    "tailwindcss": "4.1.15",
+    "tailwindcss": "4.1.16",
     "typescript": "5.8.3"
   },
   "devDependencies": {
