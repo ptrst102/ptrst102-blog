@@ -42,8 +42,8 @@ importers:
         specifier: 0.0.7
         version: 0.0.7
       daisyui:
-        specifier: 5.5.5
-        version: 5.5.5
+        specifier: 5.5.8
+        version: 5.5.8
       react:
         specifier: 19.2.0
         version: 19.2.0
@@ -1713,8 +1713,8 @@ packages:
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
-  daisyui@5.5.5:
-    resolution: {integrity: sha512-ekvI93ZkWIJoCOtDl0D2QMxnWvTejk9V5nWBqRv+7t0xjiBXqAK5U6o6JE2RPvlIC3EqwNyUoIZSdHX9MZK3nw==}
+  daisyui@5.5.8:
+    resolution: {integrity: sha512-6psL9jIEOFOw68V10j/BKCWcRgx8dh81mmNxShr+g7HDM6UHNoPharlp9zq/PQkHNuGU1ZQsajR3HgpvavbRKQ==}
 
   debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
@@ -6319,7 +6319,7 @@ snapshots:
 
   csstype@3.2.3: {}
 
-  daisyui@5.5.5: {}
+  daisyui@5.5.8: {}
 
   debug@4.4.1:
     dependencies:
