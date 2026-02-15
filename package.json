@@ -35,7 +35,7 @@
     "remark-breaks": "4.0.0",
     "satori": "0.19.2",
     "sharp": "0.34.5",
-    "tailwind-merge": "3.4.0",
+    "tailwind-merge": "3.4.1",
     "tailwindcss": "4.1.18",
     "typescript": "5.8.3"
   },
