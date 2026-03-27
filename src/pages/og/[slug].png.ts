@@ -25,7 +25,7 @@ export async function GET({ params }: APIContext) {
 
   const body = await getOgImage(post.data.title ?? "無題");
 
-  return new Response(body, {
+  return new Response(new Uint8Array(body), {
     headers: {
       "content-type": "image/png",
     },

@@ -35,7 +35,7 @@
     "sharp": "0.34.5",
     "tailwind-merge": "3.5.0",
     "tailwindcss": "4.1.18",
-    "typescript": "5.8.3"
+    "typescript": "6.0.2"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.9",
@@ -49,5 +49,14 @@
   "volta": {
     "node": "24.14.1"
   },
-  "packageManager": "pnpm@10.33.0"
+  "packageManager": "pnpm@10.33.0",
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "@astrojs/check>typescript": "6",
+        "tsconfck>typescript": "6",
+        "zod-to-ts>typescript": "6"
+      }
+    }
+  }
 }
