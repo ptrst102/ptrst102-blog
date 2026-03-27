@@ -31,7 +31,7 @@ pnpm run preview
 
 ## コードチェック
 
-- `pnpm run lint`でBiome、Prettier、textlintによる検証
+- `pnpm run lint`でBiome、Prettierによる検証
 - `pnpm run fix`で自動整形
 
 ## ディレクトリ概要
