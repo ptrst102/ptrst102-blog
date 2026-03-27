@@ -1,10 +1,11 @@
+import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import compress from "@playform/compress";
-import icon from "astro-icon";
-import { defineConfig } from "astro/config";
-import ogpCardPlugin from "./tools/remark-ogp-card";
 import tailwindcss from "@tailwindcss/vite";
-import react from "@astrojs/react";
+import { defineConfig } from "astro/config";
+import icon from "astro-icon";
+
+import ogpCardPlugin from "./tools/remark-ogp-card";
 
 // https://astro.build/config
 export default defineConfig({

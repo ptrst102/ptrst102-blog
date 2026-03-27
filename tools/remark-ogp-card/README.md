@@ -26,7 +26,11 @@ Markdown内で単一URLの段落が見つかると、以下のようなカード
   <a href="https://example.com" target="_blank" rel="noopener noreferrer">
     <p class="title">Example Title</p>
     <div class="site">
-      <img src="https://s2.googleusercontent.com/s2/favicons?domain=example.com" alt="favicon" class="favicon" />
+      <img
+        src="https://s2.googleusercontent.com/s2/favicons?domain=example.com"
+        alt="favicon"
+        class="favicon"
+      />
       <p class="domain">example.com</p>
     </div>
   </a>

@@ -1,6 +1,7 @@
+import type { APIContext } from "astro";
+
 import { getOgImage } from "@/components/OgImage";
 import { getPosts } from "@/utils/getPosts";
-import type { APIContext } from "astro";
 
 export const getStaticPaths = async () => {
   const posts = await getPosts();

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -7,10 +7,9 @@
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space"
-  },
-  "organizeImports": {
-    "enabled": true
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf"
   },
   "linter": {
     "enabled": true,
@@ -20,5 +19,25 @@
   },
   "javascript": {
     "globals": ["Astro"]
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.astro"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedVariables": "off",
+            "noUnusedImports": "off",
+            "noUnusedFunctionParameters": "off"
+          }
+        }
+      }
+    }
+  ],
+  "css": {
+    "parser": {
+      "cssModules": true,
+      "tailwindDirectives": true
+    }
   }
 }
