@@ -20,7 +20,7 @@
     "@astrojs/react": "4.4.2",
     "@astrojs/sitemap": "3.7.2",
     "@iconify-json/ic": "1.2.4",
-    "@iconify-json/simple-icons": "1.2.78",
+    "@iconify-json/simple-icons": "1.2.79",
     "@tailwindcss/typography": "0.5.19",
     "@tailwindcss/vite": "4.2.2",
     "astro": "5.18.1",
