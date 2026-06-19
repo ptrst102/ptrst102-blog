@@ -49,7 +49,7 @@
   "volta": {
     "node": "24.17.0"
   },
-  "packageManager": "pnpm@10.34.3",
+  "packageManager": "pnpm@10.34.4",
   "pnpm": {
     "peerDependencyRules": {
       "allowedVersions": {
