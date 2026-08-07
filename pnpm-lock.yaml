@@ -73,8 +73,8 @@ importers:
         specifier: 2.5.7
         version: 2.5.7
       '@playform/compress':
-        specifier: 0.2.4
-        version: 0.2.4(@types/node@26.1.2)(jiti@2.7.0)(rollup@4.36.0)(typescript@6.0.3)(yaml@2.8.2)
+        specifier: 0.2.5
+        version: 0.2.5(@types/node@26.1.2)(jiti@2.7.0)(rollup@4.36.0)(typescript@6.0.3)(yaml@2.8.2)
       '@types/react':
         specifier: 19.2.18
         version: 19.2.18
@@ -1001,8 +1001,8 @@ packages:
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
 
-  '@playform/compress@0.2.4':
-    resolution: {integrity: sha512-H2BaFT/GUcQhZF+MKU8xaq3LTVl8JFNZN8KC4srTFsLd4gbZDX4pzl2b5XKRp+vqvs6FaDzCTEqC2fDyFaw9ag==}
+  '@playform/compress@0.2.5':
+    resolution: {integrity: sha512-yr3a47zMUAUXuJ2KjXr9/avDxNt+NIaofmeEtvpkblh1Z6ryozaQhJy9JtksOsCSdxLfhbLtN+tSwIC/1tDvMA==}
 
   '@playform/pipe@0.1.6':
     resolution: {integrity: sha512-cqFMhdxiz4zO5ReKp+HJ0d0GJ6aE8a4gKVrvzIQACZcPQatttvIW2KkvOXD/gKD9NGSX69mi1rAIHriA3knEfw==}
@@ -4115,7 +4115,7 @@ snapshots:
 
   '@oslojs/encoding@1.1.0': {}
 
-  '@playform/compress@0.2.4(@types/node@26.1.2)(jiti@2.7.0)(rollup@4.36.0)(typescript@6.0.3)(yaml@2.8.2)':
+  '@playform/compress@0.2.5(@types/node@26.1.2)(jiti@2.7.0)(rollup@4.36.0)(typescript@6.0.3)(yaml@2.8.2)':
     dependencies:
       '@playform/pipe': 0.1.6
       '@types/csso': 5.0.5
@@ -4421,7 +4421,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 25.0.3
+      '@types/node': 26.1.2
 
   '@types/tar@6.1.13':
     dependencies:
@@ -4432,7 +4432,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 25.0.3
+      '@types/node': 26.1.2
     optional: true
 
   '@ungap/structured-clone@1.2.0': {}
