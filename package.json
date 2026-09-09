@@ -44,7 +44,7 @@
     "@types/react-dom": "19.2.7",
     "npm-run-all2": "8.0.4",
     "prettier": "3.9.6",
-    "prettier-plugin-astro": "0.14.1"
+    "prettier-plugin-astro": "1.0.0"
   },
   "volta": {
     "node": "24.21.0"
