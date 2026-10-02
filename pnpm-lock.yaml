@@ -54,8 +54,8 @@ importers:
         specifier: 4.0.0
         version: 4.0.0
       satori:
-        specifier: 0.33.5
-        version: 0.33.5
+        specifier: 0.35.0
+        version: 0.35.0
       sharp:
         specifier: 0.35.5
         version: 0.35.5(@types/node@26.1.2)
@@ -2740,8 +2740,8 @@ packages:
   sass-formatter@0.7.9:
     resolution: {integrity: sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==}
 
-  satori@0.33.5:
-    resolution: {integrity: sha512-PNW6ktrQ8SM6kk7u4aOuTkkUewkzyTOrj+QeEzXSsnNMAdff4ire9CAqIz8+4C3rCiBtK8QTELv52AZEd1PbRw==}
+  satori@0.35.0:
+    resolution: {integrity: sha512-YyoP7axF2T93XOWXQXLH4t+cvLgZ+MeYV/xruXJfPa/czpcRqaG41/8Bz3mzgYj/7NxdrqJOx3YtzWy1MLtG5g==}
     engines: {node: '>=16'}
 
   sax@1.5.0:
@@ -6067,7 +6067,7 @@ snapshots:
     dependencies:
       suf-log: 2.5.3
 
-  satori@0.33.5:
+  satori@0.35.0:
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
       css-background-parser: 0.1.0
