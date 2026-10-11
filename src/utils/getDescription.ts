@@ -1,7 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 
 export const getDescription = (post: CollectionEntry<"blog">) => {
-  const body = post.body
+  const body = (post.body ?? "")
     .replace(/^#+.*$/gm, "") // ヘッダー行を削除
     .replace(/\n/g, "") // 改行を削除
     .replace(/!\[.*?\]\(.*?\)/g, "") // 画像を削除

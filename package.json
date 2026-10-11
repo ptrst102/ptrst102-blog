@@ -9,21 +9,23 @@
     "preview": "astro preview",
     "astro": "astro",
     "fix": "run-s fix:*",
-    "fix:biome": "npm run lint:biome -- --write",
-    "fix:prettier": "npm run lint:prettier -- --write",
+    "fix:biome": "pnpm run lint:biome --write",
+    "fix:prettier": "pnpm run lint:prettier --write",
     "lint": "run-s lint:*",
     "lint:biome": "biome check .",
-    "lint:prettier": "prettier . --check"
+    "lint:prettier": "prettier . --check",
+    "check": "astro check",
+    "test": "node --test tools/*.test.mjs"
   },
   "dependencies": {
     "@astrojs/check": "0.9.10",
-    "@astrojs/react": "4.4.2",
+    "@astrojs/react": "7.0.1",
     "@astrojs/sitemap": "3.7.4",
     "@iconify-json/ic": "1.2.4",
     "@iconify-json/simple-icons": "1.2.99",
     "@tailwindcss/typography": "0.5.20",
     "@tailwindcss/vite": "4.3.3",
-    "astro": "5.18.2",
+    "astro": "7.3.8",
     "astro-icon": "1.2.0",
     "astro-seo": "1.2.0",
     "cdate": "0.0.7",
@@ -35,28 +37,24 @@
     "sharp": "0.35.5",
     "tailwind-merge": "3.7.0",
     "tailwindcss": "4.3.3",
-    "typescript": "6.0.3"
+    "typescript": "6.0.3",
+    "@astrojs/markdown-remark": "7.3.2"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
     "@playform/compress": "0.2.5",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "npm-run-all2": "8.0.4",
+    "npm-run-all2": "9.0.3",
     "prettier": "3.9.10",
-    "prettier-plugin-astro": "0.14.1"
+    "prettier-plugin-astro": "1.1.1"
   },
   "volta": {
     "node": "24.21.0"
   },
-  "packageManager": "pnpm@10.34.6",
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "@astrojs/check>typescript": "6",
-        "tsconfck>typescript": "6",
-        "zod-to-ts>typescript": "6"
-      }
-    }
+  "packageManager": "pnpm@12.11.2",
+  "engines": {
+    "node": "^24.21.0",
+    "pnpm": "12.11.2"
   }
 }

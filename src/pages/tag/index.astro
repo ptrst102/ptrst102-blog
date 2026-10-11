@@ -17,7 +17,11 @@ const tags = getUniqueTags(posts);
   <Drawer>
     <Header />
     <Main title="タグ一覧" description="当ブログで使用されているタグ一覧です。">
-      <div class="space-x-1">{tags.map((tag) => <Tag name={tag} />)}</div>
+      <div class="space-x-1">
+        {tags.map((tag) => (
+          <Tag name={tag} />
+        ))}
+      </div>
     </Main>
     <Footer />
   </Drawer>

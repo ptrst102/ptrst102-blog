@@ -7,6 +7,20 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7",
+      "description": "Astroの型検査がTypeScript 7に対応するまで6系を維持する"
     }
-  ]
+  ],
+  "minimumReleaseAge": "1 day",
+  "minimumReleaseAgeBehaviour": "timestamp-required",
+  "internalChecksFilter": "strict",
+  "vulnerabilityAlerts": {
+    "minimumReleaseAge": "1 day"
+  },
+  "lockFileMaintenance": {
+    "enabled": true
+  }
 }

@@ -6,15 +6,17 @@ AstroとTypeScriptで構築された個人ブログのソースコードです�
 ## 必要環境
 
 - Node.js24系（`package.json`の`volta.node`参照）
-- pnpm
-- Volta
+- pnpm12.11.2（`package.json`の`packageManager`参照）
+- Volta（任意）
 
-Node.jsとpnpmはVoltaでインストールすることを推奨します。Voltaを使うと想定バージョンのNode.jsが自動適用されます。
+Node.jsは`.node-version`と`volta.node`に固定しています。pnpmを準備する前に、標準のNode.jsだけで公開日時を検証します。
 
 ## セットアップと開発
 
 ```bash
-pnpm i
+node tools/dependency-policy.mjs
+corepack enable
+pnpm install --frozen-lockfile
 pnpm run dev
 ```
 
@@ -32,7 +34,9 @@ pnpm run preview
 ## コードチェック
 
 - `pnpm run lint`でBiome、Prettierによる検証
-- `pnpm run fix`で自動整形
+- `pnpm run check`でAstroとTypeScriptの型検査
+- `pnpm test`で公開日時の検証と、ローカルレジストリを使ったインストール拒否テスト
+- `pnpm run fix`で自動整形（記事を変更しない作業では対象ファイルを限定する）
 
 ## ディレクトリ概要
 
@@ -42,7 +46,7 @@ pnpm run preview
 - `tools/remark-ogp-card/`: URLからOGPカードを生成する remarkプラグイン
 - `src/components/OgImage.tsx`: 記事のOG画像生成処理
 
-Netlify用のキャッシュ設定は`netlify.toml`、TailwindCSSの設定は
+Netlify用のビルド・キャッシュ設定は`netlify.toml`、TailwindCSSの設定は
 `src/styles/tailwind.config.mjs`を参照してください。
 
 ## 新しい記事の追加
@@ -59,3 +63,22 @@ tags: ["タグ"]
 ```
 
 本文はこの下にMarkdownで書きます。
+
+## 依存関係の更新
+
+`pnpm-workspace.yaml`の`minimumReleaseAge: 1440`と`minimumReleaseAgeStrict: true`により、直接・推移依存とも公開後24時間未満のバージョンを拒否します。公開日時がない場合も許可せず、`trustLockfile: false`で既存ロックからのインストールも検証します。除外設定は設けていません。更新できない場合は公開後24時間が経過するまで待ちます。
+
+```bash
+node tools/dependency-policy.mjs
+pnpm update -r --no-save
+pnpm run lint
+pnpm test
+pnpm run build
+pnpm audit
+```
+
+直接依存のメジャー更新は互換性を確認して`package.json`を変更し、`pnpm install`でロックを更新します。TypeScriptは`@astrojs/check`の対応範囲である6系を維持します。
+
+Renovateにも1日の待機を設定し、セキュリティ更新にも同じ制限を適用します。ロックの定期更新で推移依存を更新します。CIはpnpm本体とその実行ファイルの公開日時を先に検証し、固定ロックでインストールしてlint・テスト・ビルドを実行します。
+
+Netlifyは依存定義のない`.netlify-build`を起点にし、自動インストールより前に同じ公開日時検証を行います。その後リポジトリルートでpnpmのインストール検証と各チェックを実行し、`dist`を公開します。

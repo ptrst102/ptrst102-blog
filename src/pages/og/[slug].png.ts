@@ -7,7 +7,7 @@ export const getStaticPaths = async () => {
   const posts = await getPosts();
 
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: {
       post,
     },
@@ -16,12 +16,12 @@ export const getStaticPaths = async () => {
 
 export async function GET({ params }: APIContext) {
   const { slug } = params;
-  if (!slug) return { status: 404 };
+  if (!slug) return new Response(null, { status: 404 });
 
   const posts = await getPosts();
 
-  const post = posts.find((post) => post.slug === slug);
-  if (!post) return { status: 404 };
+  const post = posts.find((post) => post.id === slug);
+  if (!post) return new Response(null, { status: 404 });
 
   const body = await getOgImage(post.data.title ?? "無題");
 

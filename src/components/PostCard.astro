@@ -19,7 +19,7 @@ const description = getDescription(Astro.props.post);
 <article class="mb-6">
   <h2 class="mb-1">
     <a
-      href={`/blog/${Astro.props.post.slug}`}
+      href={`/blog/${Astro.props.post.id}`}
       class="link link-primary text-2xl font-bold"
     >
       {title}
@@ -27,21 +27,24 @@ const description = getDescription(Astro.props.post);
   </h2>
 
   <div class="mb-1 flex items-center gap-2 text-sm">
-    <span class="flex items-center gap-0.5"
-      ><Icon name="ic:baseline-access-time" />{publishAt}</span
-    >
-    {
-      updateAt && (
-        <span class="flex items-center gap-0.5">
-          <Icon name="ic:baseline-update" />
-          {updateAt}
-        </span>
-      )
-    }
+    <span class="flex items-center gap-0.5">
+      <Icon name="ic:baseline-access-time" />
+      {publishAt}
+    </span>
+    {updateAt && (
+      <span class="flex items-center gap-0.5">
+        <Icon name="ic:baseline-update" />
+        {updateAt}
+      </span>
+    )}
   </div>
   <div class="mb-1 space-x-1">
-    {tags.map((tag) => <Tag name={tag} small />)}
+    {tags.map((tag) => (
+      <Tag name={tag} small />
+    ))}
   </div>
   <p class="mb-1 text-sm">{description}</p>
-  <a href={`/blog/${Astro.props.post.slug}`} class="link">全文を見る</a>
+  <a href={`/blog/${Astro.props.post.id}`} class="link">
+    全文を見る
+  </a>
 </article>
