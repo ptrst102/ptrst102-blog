@@ -5,24 +5,42 @@ import { setTimeout } from "node:timers/promises";
 
 const base = new URL(process.argv[2]);
 const previous = process.argv[3] ? new URL(process.argv[3]) : undefined;
+const expectedCommit = process.argv[4];
+assert(
+  /^[a-f0-9]{40}$/.test(expectedCommit ?? ""),
+  "公開コミットの指定が必要です",
+);
 const manifest = JSON.parse(await readFile("package.json", "utf8"));
 const generator = `Astro v${manifest.dependencies.astro}`;
 
 const fetchPage = async (path, origin = base) => {
-  const response = await fetch(new URL(path, origin), {
-    signal: AbortSignal.timeout(20_000),
-    cache: "no-store",
-  });
-  assert(
-    response.ok || (path === "/404.html" && response.status === 404),
-    `${response.url}: HTTP ${response.status}`,
-  );
-  return response;
+  const url = new URL(path, origin);
+  for (let attempt = 0; ; attempt++) {
+    try {
+      const response = await fetch(url, {
+        signal: AbortSignal.timeout(20_000),
+        cache: "no-store",
+      });
+      assert(
+        response.ok || (path === "/404.html" && response.status === 404),
+        `${response.url}: HTTP ${response.status}`,
+      );
+      return response;
+    } catch (error) {
+      if (attempt >= 2)
+        throw new Error(`${url}: ${error.message}`, { cause: error });
+      await setTimeout(1_000);
+    }
+  }
 };
 
 // Netlifyの公開完了を待ち、旧Astroの成果物を成功扱いしない。
 for (let attempt = 0; ; attempt++) {
   try {
+    const deployed = await (
+      await fetchPage(`/.well-known/deployment.json?commit=${expectedCommit}`)
+    ).json();
+    assert.equal(deployed.commit, expectedCommit, "対象コミットの公開を待機中");
     const html = await (await fetchPage("/")).text();
     assert(html.includes(generator), `${generator}の公開を待機中`);
     break;
@@ -85,7 +103,10 @@ const assets = files.filter(
   (file) =>
     file.startsWith("_astro/") && /\.(css|js|webp|png|jpg|svg)$/.test(file),
 );
-for (const file of assets) await fetchPage(`/${file}`);
+for (const file of assets) {
+  const response = await fetchPage(`/${file}`);
+  await response.body.cancel();
+}
 console.log(
-  `公開確認成功: ${base.href} / ${pages.length}ページ・OG画像${images.length}枚・アセット${assets.length}件`,
+  `公開確認成功: ${base.href} @ ${expectedCommit} / ${pages.length}ページ・OG画像${images.length}枚・アセット${assets.length}件`,
 );
