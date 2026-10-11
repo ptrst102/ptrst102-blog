@@ -30,3 +30,8 @@ jobs:
       - run: pnpm run lint
       - run: pnpm test
       - run: pnpm run build
+      - name: Netlifyの公開成果物を確認
+        env:
+          DEPLOY_URL: ${{ github.event_name == 'pull_request' && format('https://deploy-preview-{0}--grand-kelpie-9ab667.netlify.app', github.event.number) || 'https://ptrst102.com' }}
+          PREVIOUS_URL: ${{ github.event_name == 'pull_request' && 'https://ptrst102.com' || '' }}
+        run: node tools/check-deployment.mjs "$DEPLOY_URL" "$PREVIOUS_URL"
