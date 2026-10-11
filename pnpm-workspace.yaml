@@ -11,7 +11,7 @@ allowBuilds:
   sharp: true
 # 上流が固定した脆弱な版を、互換性を確認した修正版へ置き換える。
 overrides:
-  "fflate@0.7.3": 0.7.5
+  "fflate@0.7.3": 0.8.3
   "deepmerge-ts@7.1.5": 8.0.2
   "@playform/compress>sharp": 0.35.5
   "@playform/compress>svgo": 4.1.0
