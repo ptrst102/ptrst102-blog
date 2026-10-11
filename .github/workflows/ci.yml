@@ -16,6 +16,8 @@ jobs:
       ASTRO_TELEMETRY_DISABLED: "1"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .node-version
@@ -34,4 +36,11 @@ jobs:
         env:
           DEPLOY_URL: ${{ github.event_name == 'pull_request' && format('https://deploy-preview-{0}--grand-kelpie-9ab667.netlify.app', github.event.number) || 'https://ptrst102.com' }}
           PREVIOUS_URL: ${{ github.event_name == 'pull_request' && 'https://ptrst102.com' || '' }}
-        run: node tools/check-deployment.mjs "$DEPLOY_URL" "$PREVIOUS_URL"
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # 記事を更新するPRでは、意図した記事・カード変更を許可する。
+          if [ -n "$PREVIOUS_URL" ] && ! git diff --quiet "$BASE_SHA" "$HEAD_SHA" -- src/content/blog; then
+            PREVIOUS_URL=""
+          fi
+          node tools/check-deployment.mjs "$DEPLOY_URL" "$PREVIOUS_URL"
