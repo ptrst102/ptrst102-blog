@@ -1,3 +1,4 @@
+import { readFile } from "node:fs/promises";
 import satori from "satori";
 import sharp from "sharp";
 
@@ -5,6 +6,7 @@ const fontFamily = "Noto Sans JP";
 
 export const getOgImage = async (text: string) => {
   const fontData = await fetchFont();
+  const logoData = await readFile("public/logo.png");
 
   const MAX_LENGTH = 40;
   const truncatedText =
@@ -50,7 +52,7 @@ export const getOgImage = async (text: string) => {
           }}
         >
           <img
-            src="https://ptrst102.com/logo.png"
+            src={`data:image/png;base64,${logoData.toString("base64")}`}
             alt="ptrst102どっとこむ"
             style={{ height: "1em" }}
           />

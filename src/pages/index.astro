@@ -17,11 +17,9 @@ const sortedPosts = getSortedPosts(posts);
     <Header />
     <main class="mx-auto w-full max-w-3xl px-4 pb-20 pt-6">
       <section>
-        {
-          sortedPosts.map((post) => {
-            return <PostCard post={post} />;
-          })
-        }
+        {sortedPosts.map((post) => {
+          return <PostCard post={post} />;
+        })}
       </section>
     </main>
     <Footer />

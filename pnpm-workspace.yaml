@@ -1,7 +1,18 @@
 packages:
-  - packages/*
   - tools/*
-onlyBuiltDependencies:
-  - "@biomejs/biome"
-  - esbuild
-  - sharp
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true
+minimumReleaseAgeIgnoreMissingTime: false
+trustLockfile: false
+pmOnFail: error
+allowBuilds:
+  "@biomejs/biome": true
+  esbuild: true
+  sharp: true
+# 上流が固定した脆弱な版を、互換性を確認した修正版へ置き換える。
+overrides:
+  "fflate@0.7.3": 0.7.5
+  "deepmerge-ts@7.1.5": 8.0.2
+  "@playform/compress>sharp": 0.35.5
+  "@playform/compress>svgo": 4.1.0
+  "@tailwindcss/typography>postcss-selector-parser": 7.1.6

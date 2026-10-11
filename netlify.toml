@@ -1,3 +1,14 @@
+[build]
+  # 依存のないディレクトリを起点にし、公開日時の検証後にインストールする。
+  base = ".netlify-build"
+  command = "bash build.sh"
+  publish = "../dist"
+  ignore = "exit 1"
+
+[build.environment]
+  NODE_VERSION = "24.21.0"
+  ASTRO_TELEMETRY_DISABLED = "1"
+
 [[headers]]
   for = "/_astro/*"
   [headers.values]

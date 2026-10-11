@@ -1,5 +1,5 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import { type CollectionEntry, render } from "astro:content";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import Tag from "@/components/Tag.astro";
@@ -17,7 +17,7 @@ const { post } = Astro.props;
 
 const { title, tags } = post.data;
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const publishAt = cdate(post.data.publishDate).format("YYYY年M月D日");
 const updateAt =
@@ -30,7 +30,7 @@ const description = getDescription(post);
   description={description}
   openGraphType="article"
   openGraphImage={new URL(
-    `/og/${post.slug}.png`,
+    `/og/${post.id}.png`,
     import.meta.env.SITE,
   ).toString()}
 >
@@ -39,9 +39,7 @@ const description = getDescription(post);
 
     <main class="mx-auto w-full max-w-3xl px-4 pb-12 pt-6">
       <section class="mb-8">
-        <h1
-          class="mb-6 text-center text-4xl font-bold text-primary lg:text-5xl"
-        >
+        <h1 class="mb-6 text-center text-4xl font-bold text-primary lg:text-5xl">
           {title}
         </h1>
         <div class="mb-2 flex items-center justify-end gap-2">
@@ -56,7 +54,9 @@ const description = getDescription(post);
       </section>
       <section>
         <div class="space-x-1">
-          {tags.map((tag) => <Tag name={tag} />)}
+          {tags.map((tag) => (
+            <Tag name={tag} />
+          ))}
         </div>
       </section>
     </main>

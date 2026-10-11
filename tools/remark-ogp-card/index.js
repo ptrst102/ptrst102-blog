@@ -18,7 +18,7 @@ const ogpCardPlugin = () => {
           /(https?:\/\/|www(?=\.))([-.\w]+)([^ \t\r\n]*)/g,
         );
 
-        if (!urls || urls.length !== 1) {
+        if (urls?.length !== 1) {
           return;
         }
 
