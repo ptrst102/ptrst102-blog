@@ -38,6 +38,8 @@ pnpm run preview
 - `pnpm test`で公開日時の検証と、ローカルレジストリを使ったインストール拒否テスト
 - `pnpm run fix`で自動整形（記事を変更しない作業では対象ファイルを限定する）
 
+`pnpm-lock.yaml`はpnpmの標準生成形式で管理し、Prettierの対象から除外します。通常のインストールやRenovateのロック再生成後も、手動で整形する必要はありません。ロックの整合性と公開後24時間の制限は、CIとNetlifyの`pnpm install --frozen-lockfile`で引き続き検証します。
+
 ## ディレクトリ概要
 
 - `src/content/blog/`: Markdown形式の記事
