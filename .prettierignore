@@ -1,0 +1,2 @@
+# pnpmが生成する書式を維持し、Renovateの再生成による整形差分を防ぐ。
+/pnpm-lock.yaml
