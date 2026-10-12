@@ -28,7 +28,7 @@ pnpm run build
 pnpm run preview
 ```
 
-`build`は型検査を行い、公開用のファイルを`dist/`に生成します。`preview`でビルド結果を確認できます。
+`pnpm run build`で公開用のファイルを`dist/`に生成します。生成されたファイルは`pnpm run preview`で動作確認できます。
 
 ## コードチェック
 
