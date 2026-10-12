@@ -19,7 +19,6 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .node-version
-          package-manager-cache: false
       - name: pnpmの公開後24時間を確認
         run: node tools/dependency-policy.mjs
       - name: 固定バージョンのpnpmを準備
