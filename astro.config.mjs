@@ -17,7 +17,6 @@ export default defineConfig({
   integrations: [sitemap(), react(), icon(), compress()],
   markdown: {
     processor: unified({
-      gfm: true,
       remarkPlugins: [remarkBreaks, ogpCardPlugin],
       remarkRehype: {
         footnoteLabel: "脚注",
