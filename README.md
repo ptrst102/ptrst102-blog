@@ -11,10 +11,9 @@ Node.jsのバージョン管理ツールとしてVoltaを想定しています�
 
 ## セットアップと開発
 
-リポジトリのルートで次のコマンドを実行します。最初のコマンドで`pnpm`本体の公開から24時間以上経過していることを確認します。
+リポジトリのルートで次のコマンドを実行します。
 
 ```bash
-node tools/dependency-policy.mjs
 corepack enable
 pnpm install
 pnpm run dev
