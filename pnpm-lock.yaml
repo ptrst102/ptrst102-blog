@@ -167,7 +167,7 @@ overrides:
   deepmerge-ts@7.1.5: 8.0.2
   '@playform/compress>sharp': 0.35.5
   '@playform/compress>svgo': 4.1.0
-  '@tailwindcss/typography>postcss-selector-parser': 7.2.0
+  '@tailwindcss/typography>postcss-selector-parser': 7.2.1
 
 importers:
 
@@ -2219,8 +2219,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  postcss-selector-parser@7.2.0:
-    resolution: {integrity: sha512-Khh/tERVBn0I1499dvBSHY0pWJloMJWUxDsOBM0CCDPAcVZ10Jl2L1qy1f19uEX22spa8Mv7DCdEQJc0cGwBhQ==}
+  postcss-selector-parser@7.2.1:
+    resolution: {integrity: sha512-GwxlMgTTXwIom+ebC7an3k6RaJDwklRQQnfiXsLPGicu8FYV/k/+1/9YY2OU2+r938H2t4X0TDxoif+HP2rjzQ==}
     engines: {node: '>=4'}
 
   postcss-value-parser@4.2.0:
@@ -3727,7 +3727,7 @@ snapshots:
 
   '@tailwindcss/typography@0.5.20(tailwindcss@4.3.5)':
     dependencies:
-      postcss-selector-parser: 7.2.0
+      postcss-selector-parser: 7.2.1
       tailwindcss: 4.3.5
 
   '@tailwindcss/vite@4.3.5(vite@8.3.7(@types/node@26.1.2)(jiti@2.7.0)(terser@5.49.2)(yaml@2.9.1))':
@@ -5258,7 +5258,7 @@ snapshots:
 
   pidtree@1.0.0: {}
 
-  postcss-selector-parser@7.2.0:
+  postcss-selector-parser@7.2.1:
     dependencies:
       util-deprecate: 1.0.2
 
