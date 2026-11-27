@@ -42,7 +42,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
     "@playform/compress": "0.2.5",
-    "@types/react": "19.3.1",
+    "@types/react": "19.3.3",
     "@types/react-dom": "19.3.0",
     "npm-run-all2": "9.1.0",
     "prettier": "3.10.1",
